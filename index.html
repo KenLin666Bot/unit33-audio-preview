@@ -898,7 +898,7 @@
       <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit31-audio-preview/" href="../Unit31_有声互动预习课/Unit31_有声互动预习课.html" title="Unit 31 各官能团的典型反应">U31</a>
       <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit32-audio-preview/" href="../Unit32_有声互动预习课/Unit32_有声互动预习课.html" title="Unit 32 碳化合物的合成">U32</a>
       <span class="pill-link active-unit-pill" title="当前单元：Unit 33 重要的有机物质">🎧 U33</span>
-      <a class="pill-link" id="companion-site-link" href="../Mastering_Chemistry_Topic7_8_学习站.html">📖 Topic 7 &amp; 8 闯关站</a>
+      <a class="pill-link primary-pill" id="companion-site-link" href="../Mastering_Chemistry_Topic7_8_学习站.html#u33" title="直达 Unit 33 重要的有机物质 三阶闯关刷题与英文长题题眼解码">📖 本章闯关刷题 (U33)</a>
     </div>
   </header>
 
@@ -912,6 +912,16 @@
       <div class="ep-hero-card" id="ep-hero"></div>
       <div id="boards-container" style="display:flex; flex-direction:column; gap:14px;"></div>
       <div class="quiz-card" id="quiz-container"></div>
+      <div class="quiz-card" id="practice-bridge-card" style="background:linear-gradient(135deg,#eef2ff 0%,#f0fdfa 100%);border:1.5px solid #a5b4fc;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <div>
+          <div style="font-size:15px;font-weight:800;color:#1e1b4b;">🎯 听完预习课，立即趁热打铁刷真题！</div>
+          <div style="font-size:13px;color:#334155;margin-top:2px;">一键跳转到《Topic 7 &amp; 8 闯关学习站》的 <strong>Unit 33 专属章节</strong>，挑战 Level 1–3 阶梯题与英文长题“题眼解码”。</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+          <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/mastering-organic-chem/#u33" href="../Mastering_Chemistry_Topic7_8_学习站.html#u33" style="background:var(--primary);color:#fff;border-color:var(--primary);padding:7px 14px;font-weight:800;">📖 直达 Unit 33 闯关刷题 →</a>
+          <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/mastering-organic-chem/#map" href="../Mastering_Chemistry_Topic7_8_学习站.html#map" style="padding:7px 12px;">🗺️ 全局转化地图</a>
+        </div>
+      </div>
     </div>
 
     <!-- Right Structured Lecture Stream -->
@@ -1002,7 +1012,7 @@
       const handoutMdLink = document.getElementById('handout-md-link');
 
       if (/\.github\.io$/i.test(window.location.hostname)) {
-        companionLink.href = 'https://kenlin666bot.github.io/mastering-organic-chem/';
+        companionLink.href = 'https://kenlin666bot.github.io/mastering-organic-chem/#u33';
         handoutMdLink.href = encodeURI('https://github.com/KenLin666Bot/unit33-audio-preview/blob/main/Unit33_双语课堂讲义与逐字稿.md');
         document.querySelectorAll('.unit-jump-link').forEach(a => {
           const gh = a.getAttribute('data-gh');
