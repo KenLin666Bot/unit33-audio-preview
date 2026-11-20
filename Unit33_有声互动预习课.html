@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Unit33有声预习" />
+  <title>Unit 33 重要的有机物质 · 有声互动预习课 | Mastering Chemistry</title>
+  <style>
+    :root {
+      --bg-app: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --text-main: #0f172a;
+      --text-sec: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-soft: #eff6ff;
+
+      --teal: #0d9488;
+      --teal-soft: #f0fdfa;
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-app);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 108px;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+
+    .pill-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .pill-link.primary-pill {
+      background: var(--primary-soft);
+      border-color: #c7d2fe;
+      color: var(--primary-dark);
+    }
+
+    .pill-link.active-unit-pill {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      cursor: default;
+      font-weight: 700;
+    }
+
+    .ep-strip-wrap {
+      max-width: 1440px;
+      margin: 14px auto 0;
+      padding: 0 18px;
+    }
+
+    .ep-strip {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(185px, 1fr));
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .ep-tab {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+      position: relative;
+    }
+
+    .ep-tab:hover {
+      border-color: #a5b4fc;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-tab.active {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, var(--primary-soft) 0%, #ffffff 100%);
+      box-shadow: 0 4px 14px rgba(79, 70, 229, 0.14);
+    }
+
+    .ep-tab-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .ep-done-dot {
+      font-size: 11px;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      padding: 1px 6px;
+      border-radius: 99px;
+      font-weight: 700;
+    }
+
+    .ep-tab-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ep-tab-meta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .classroom-grid {
+      max-width: 1440px;
+      margin: 14px auto 24px;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.34fr) minmax(360px, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 1060px) {
+      .classroom-grid { grid-template-columns: 1fr; }
+      .ep-strip { grid-template-columns: repeat(5, 220px); }
+    }
+
+    .blackboard-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ep-hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .ep-hero-title {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .ep-hero-en {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .ep-goal-box {
+      background: var(--bg-subtle);
+      border-left: 3.5px solid var(--primary);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: var(--text-sec);
+      margin-bottom: 10px;
+    }
+
+    .term-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .term-chip {
+      font-size: 12px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 3px 10px;
+      color: #1e293b;
+    }
+
+    .term-chip b {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .board-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .board-card.is-active-board {
+      border-color: var(--primary);
+      box-shadow: 0 10px 28px rgba(79, 70, 229, 0.14);
+      background: #ffffff;
+    }
+
+    .board-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .board-tag-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .board-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .board-card.is-active-board .board-tag {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .live-pill {
+      display: none;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    .board-card.is-active-board .live-pill {
+      display: inline-flex;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.68; }
+    }
+
+    .board-jump-btn {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      border: 1px solid #c7d2fe;
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .board-jump-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .board-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .board-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .board-grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .b-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+    }
+
+    .b-amber   { background: #fffbeb; border-color: #fde68a; }
+    .b-blue    { background: #eff6ff; border-color: #bfdbfe; }
+    .b-rose    { background: #fff1f2; border-color: #fecdd3; }
+    .b-teal    { background: #f0fdfa; border-color: #99f6e4; }
+    .b-emerald { background: #ecfdf5; border-color: #a7f3d0; }
+
+    .b-box-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .b-eq {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 7px;
+      overflow-x: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .b-points {
+      margin: 6px 0 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .b-points li { margin-bottom: 4px; }
+
+    .b-quote {
+      background: linear-gradient(90deg, var(--primary-soft), #f8fafc);
+      border-left: 4px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .b-quote-en {
+      font-size: 13.3px;
+      color: #1e3a8a;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    .b-quote-zh {
+      font-size: 13px;
+      color: #0f172a;
+    }
+
+    .b-scheme {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 11px 14px;
+      overflow-x: auto;
+      margin-bottom: 8px;
+    }
+
+    .b-scheme pre {
+      margin: 0;
+      font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+      font-size: 12.5px;
+      line-height: 1.54;
+      color: #e2e8f0;
+    }
+
+    .b-mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.8px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .b-mini-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+    }
+
+    .b-mini-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-sec);
+    }
+
+    .b-note {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 12.8px;
+      color: #92400e;
+    }
+
+    .b-tip-text {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .board-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    code {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 0.92em;
+      background: rgba(15, 23, 42, 0.06);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #be123c;
+    }
+
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quiz-head {
+      font-size: 15.5px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .q-item {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .q-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .q-stem {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .q-opt-btn {
+      text-align: left;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      font-size: 13.5px;
+      color: var(--text-sec);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .q-opt-btn:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .q-opt-btn.correct {
+      background: var(--emerald-soft);
+      border-color: var(--emerald);
+      color: #065f46;
+      font-weight: 700;
+    }
+
+    .q-opt-btn.wrong {
+      background: var(--rose-soft);
+      border-color: var(--rose);
+      color: #9f1239;
+    }
+
+    .q-exp {
+      display: none;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      font-size: 13px;
+      color: #166534;
+    }
+
+    /* Right Pane: Single-Teacher Structured Lecture Stream */
+    .transcript-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 72px;
+      max-height: calc(100vh - 184px);
+    }
+
+    @media (max-width: 1060px) {
+      .transcript-pane {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    .transcript-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .transcript-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .auto-scroll-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      cursor: pointer;
+    }
+
+    .auto-scroll-btn.on {
+      background: var(--primary-soft);
+      border-color: #a5b4fc;
+      color: var(--primary-dark);
+    }
+
+    .transcript-list {
+      padding: 14px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .turn-bubble {
+      border-radius: 12px;
+      padding: 11px 13px;
+      border: 1.5px solid #e2e8f0;
+      border-left-width: 4px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+    }
+
+    .turn-bubble.role-concept { border-left-color: #4f46e5; }
+    .turn-bubble.role-example { border-left-color: #0d9488; background: #f8fdfa; }
+    .turn-bubble.role-trap    { border-left-color: #e11d48; background: #fff9fa; }
+    .turn-bubble.role-summary { border-left-color: #059669; background: #f6fef9; }
+
+    .turn-bubble:hover {
+      border-color: #a5b4fc;
+      transform: translateX(1px);
+    }
+
+    .turn-bubble.active-turn {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      border-left-width: 4.5px;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.14);
+    }
+
+    .turn-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .speaker-name {
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary-dark);
+    }
+
+    .role-trap .speaker-name { color: #be123c; }
+    .role-example .speaker-name { color: #0f766e; }
+    .role-summary .speaker-name { color: #047857; }
+
+    .turn-time {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e2e8f0;
+      padding: 1px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .turn-text {
+      font-size: 14px;
+      line-height: 1.64;
+      color: var(--text-main);
+    }
+
+    /* Sticky Bottom Audio Dock */
+    .audio-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 120;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(14px);
+      color: #f8fafc;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 20px 12px;
+      box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.25);
+    }
+
+    .dock-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .scrubber-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .time-lbl {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      min-width: 44px;
+    }
+
+    .scrubber-wrap {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    #seek-slider {
+      width: 100%;
+      accent-color: #60a5fa;
+      cursor: pointer;
+      height: 6px;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-left, .ctrl-center, .ctrl-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .now-playing-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+      max-width: 360px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dock-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 5px 11px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .dock-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .play-main-btn {
+      background: #60a5fa;
+      color: #0f172a;
+      border: none;
+      border-radius: 999px;
+      padding: 7px 20px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(129, 140, 248, 0.4);
+    }
+
+    .play-main-btn:hover {
+      background: #93c5fd;
+    }
+
+    .speed-select {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 5px 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .speed-select option {
+      color: #0f172a;
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-badge">U33</div>
+      <div>
+        <div class="brand-title">Unit 33 重要的有机物质 · 双语有声互动预习课</div>
+        <div class="brand-sub">HKDSE 精工版《Mastering Chemistry》Book 3B · 陈老师沉稳主讲 + 动态声画同步黑板</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="pill-link primary-pill" id="download-merged-link" href="#" download>📥 下载完整连听版 MP3 (<span id="total-dur-badge"></span>)</a>
+      <a class="pill-link" id="download-ep-link" href="#" download>🎵 下载本讲 MP3</a>
+      <a class="pill-link" id="handout-md-link" href="./Unit33_双语课堂讲义与逐字稿.md" target="_blank">📄 双语讲义逐字稿</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit29-audio-preview/" href="../Unit29_有声互动预习课/Unit29_有声互动预习课.html" title="Unit 29 碳化合物的命名及物理性质">U29</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit30-audio-preview/" href="../Unit30_有声互动预习课/Unit30_有声互动预习课.html" title="Unit 30 同分异构现象">U30</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit31-audio-preview/" href="../Unit31_有声互动预习课/Unit31_有声互动预习课.html" title="Unit 31 各官能团的典型反应">U31</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit32-audio-preview/" href="../Unit32_有声互动预习课/Unit32_有声互动预习课.html" title="Unit 32 碳化合物的合成">U32</a>
+      <span class="pill-link active-unit-pill" title="当前单元：Unit 33 重要的有机物质">🎧 U33</span>
+      <a class="pill-link" id="companion-site-link" href="../Mastering_Chemistry_Topic7_8_学习站.html">📖 Topic 7 &amp; 8 闯关站</a>
+    </div>
+  </header>
+
+  <section class="ep-strip-wrap" aria-label="微课章节选择">
+    <div class="ep-strip" id="ep-strip"></div>
+  </section>
+
+  <main class="classroom-grid">
+    <!-- Left Synchronized Blackboard -->
+    <div class="blackboard-pane">
+      <div class="ep-hero-card" id="ep-hero"></div>
+      <div id="boards-container" style="display:flex; flex-direction:column; gap:14px;"></div>
+      <div class="quiz-card" id="quiz-container"></div>
+    </div>
+
+    <!-- Right Structured Lecture Stream -->
+    <aside class="transcript-pane" aria-label="课堂主讲逐字稿">
+      <div class="transcript-header">
+        <div class="transcript-title">🎙️ 陈老师双语精讲逐字稿（点击任意段跳读）</div>
+        <button class="auto-scroll-btn on" id="auto-scroll-toggle">🎯 自动跟随：开</button>
+      </div>
+      <div class="transcript-list" id="transcript-list"></div>
+    </aside>
+  </main>
+
+  <!-- Sticky Bottom Audio Player -->
+  <footer class="audio-dock">
+    <audio id="classroom-audio" preload="metadata"></audio>
+    <div class="dock-inner">
+      <div class="scrubber-row">
+        <span class="time-lbl" id="cur-time">00:00</span>
+        <div class="scrubber-wrap">
+          <input type="range" id="seek-slider" min="0" max="100" step="0.1" value="0" aria-label="播放进度" />
+        </div>
+        <span class="time-lbl" id="dur-time">00:00</span>
+      </div>
+      <div class="controls-row">
+        <div class="ctrl-left">
+          <span class="now-playing-label" id="dock-ep-label">正在加载...</span>
+        </div>
+        <div class="ctrl-center">
+          <button class="dock-btn" id="prev-ep-btn" title="上一讲">⏮ 上一讲</button>
+          <button class="dock-btn" id="rew-btn" title="后退 10 秒">⏪ -10s</button>
+          <button class="play-main-btn" id="play-btn">▶ 开始听课</button>
+          <button class="dock-btn" id="fwd-btn" title="前进 10 秒">+10s ⏩</button>
+          <button class="dock-btn" id="next-ep-btn" title="下一讲">下一讲 ⏭</button>
+        </div>
+        <div class="ctrl-right">
+          <label for="speed-select" style="font-size:12px;color:#cbd5e1;">语速</label>
+          <select class="speed-select" id="speed-select">
+            <option value="0.85">0.85x 慢速细听</option>
+            <option value="1" selected>1.0x 标准课堂</option>
+            <option value="1.15">1.15x 轻快预习</option>
+            <option value="1.25">1.25x 高效复习</option>
+            <option value="1.5">1.5x 考前速刷</option>
+          </select>
+          <button class="dock-btn" id="autoplay-btn">🔁 连播：开</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.COURSE_DATA = {"totalDuration": 1514.19, "mergedAudioFile": "audio/00_Unit33_重要的有机物质_完整连听版.mp3", "episodes": [{"id": "ep1", "epNum": "第 1 讲", "code": "33.1 – 33.2", "fileSlug": "01_33.1-33.2_阿司匹林结构药效与返滴定分析", "titleZh": "阿司匹林（Aspirin）的结构修饰、四大药效与 1:2 返滴定分析", "titleEn": "Structure, Medical Uses & Back Titration Analysis of Aspirin (Acetylsalicylic Acid)", "goal": "掌握从水杨酸（salicylic acid）到阿司匹林（aspirin, C₉H₈O₄, M = 180.0 g mol⁻¹）的酯化结构修饰与氧连苯环红线，熟记四大医疗用途与胃部副作用改良方案，彻底攻克 HKDSE 课本 1:2 碱性水解铁律与返滴定（back titration）“一乘十、二除二”定量计算。", "keyTerms": [{"en": "aspirin / acetylsalicylic acid", "zh": "阿司匹林 / 乙酰水杨酸 (C₉H₈O₄)"}, {"en": "analgesic & antipyretic", "zh": "止痛药与退烧药"}, {"en": "anti-inflammatory agent", "zh": "消炎药（治关节炎）"}, {"en": "irritate the stomach lining", "zh": "刺激胃壁（含 —COOH）"}, {"en": "enteric-coated aspirin", "zh": "肠溶阿司匹林"}, {"en": "back titration (1 : 2 ratio)", "zh": "返滴定法（严守 1:2 摩尔比）"}], "boards": [{"id": "b1_1", "tag": "板书 1 · 结构修饰 (33.1A)", "title": "从柳树皮水杨酸到百年名药 Aspirin：三大结构部件与“氧连苯环”红线", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 218\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"水杨酸与阿司匹林结构对比图\">\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"218\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"24\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1e3a8a\">从刺激胃壁的天然先导物 Salicylic Acid 到温和名药 Aspirin 的酯化修饰</text>\n\n  <!-- Left box: Salicylic acid -->\n  <rect x=\"18\" y=\"38\" width=\"275\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <rect x=\"18\" y=\"38\" width=\"275\" height=\"26\" rx=\"10\" fill=\"#fef3c7\"/>\n  <text x=\"155\" y=\"55\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#92400e\">天然柳树皮有效成分：Salicylic acid</text>\n  <!-- Benzene hexagon -->\n  <polygon points=\"95,92 125,75 155,92 155,127 125,144 95,127\" fill=\"none\" stroke=\"#334155\" stroke-width=\"2\"/>\n  <circle cx=\"125\" cy=\"109.5\" r=\"17\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.6\"/>\n  <line x1=\"155\" y1=\"92\" x2=\"182\" y2=\"78\" stroke=\"#334155\" stroke-width=\"2\"/>\n  <text x=\"186\" y=\"82\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"13\" font-weight=\"800\" fill=\"#1d4ed8\">COOH</text>\n  <line x1=\"155\" y1=\"127\" x2=\"182\" y2=\"141\" stroke=\"#dc2626\" stroke-width=\"2\"/>\n  <text x=\"186\" y=\"146\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"13\" font-weight=\"800\" fill=\"#dc2626\">OH (强刺激!)</text>\n  <text x=\"155\" y=\"173\" text-anchor=\"middle\" font-size=\"11.8\" font-weight=\"700\" fill=\"#334155\">2-hydroxybenzoic acid</text>\n  <text x=\"155\" y=\"191\" text-anchor=\"middle\" font-size=\"11.2\" fill=\"#b91c1c\">裸露酚羟基 + 强酸性剧烈灼伤胃壁</text>\n\n  <!-- Arrow -->\n  <line x1=\"305\" y1=\"118\" x2=\"368\" y2=\"118\" stroke=\"#2563eb\" stroke-width=\"2.5\"/>\n  <polygon points=\"368,113 380,118 368,123\" fill=\"#2563eb\"/>\n  <text x=\"342\" y=\"106\" text-anchor=\"middle\" font-size=\"11.2\" font-weight=\"800\" fill=\"#1d4ed8\">Esterification</text>\n  <text x=\"342\" y=\"136\" text-anchor=\"middle\" font-size=\"10.8\" fill=\"#475569\">封住 —OH</text>\n\n  <!-- Right box: Aspirin -->\n  <rect x=\"390\" y=\"38\" width=\"372\" height=\"166\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.8\"/>\n  <rect x=\"390\" y=\"38\" width=\"372\" height=\"26\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"576\" y=\"55\" text-anchor=\"middle\" font-size=\"12.2\" font-weight=\"800\" fill=\"#1d4ed8\">Aspirin (Acetylsalicylic acid) · C₉H₈O₄ (M = 180.0)</text>\n  <!-- Benzene hexagon -->\n  <polygon points=\"445,92 475,75 505,92 505,127 475,144 445,127\" fill=\"#eff6ff\" stroke=\"#1e40af\" stroke-width=\"2\"/>\n  <circle cx=\"475\" cy=\"109.5\" r=\"17\" fill=\"none\" stroke=\"#1e40af\" stroke-width=\"1.6\"/>\n  <text x=\"438\" y=\"114\" text-anchor=\"end\" font-size=\"11.2\" font-weight=\"800\" fill=\"#475569\">② 1,2-苯环</text>\n  <!-- COOH -->\n  <line x1=\"505\" y1=\"92\" x2=\"534\" y2=\"78\" stroke=\"#1d4ed8\" stroke-width=\"2\"/>\n  <rect x=\"536\" y=\"63\" width=\"214\" height=\"24\" rx=\"5\" fill=\"#eff6ff\" stroke=\"#93c5fd\"/>\n  <text x=\"543\" y=\"79\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.2\" font-weight=\"800\" fill=\"#1d4ed8\">COOH ① 羧基 (遇 NaHCO₃ 冒泡)</text>\n  <!-- OCOCH3 -->\n  <line x1=\"505\" y1=\"127\" x2=\"534\" y2=\"141\" stroke=\"#e11d48\" stroke-width=\"2.2\"/>\n  <rect x=\"536\" y=\"128\" width=\"214\" height=\"26\" rx=\"5\" fill=\"#fff1f2\" stroke=\"#fda4af\"/>\n  <text x=\"543\" y=\"145\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.2\" font-weight=\"800\" fill=\"#be123c\">O—C(=O)CH₃ ③ 酯基 (氧连苯环!)</text>\n  <text x=\"576\" y=\"176\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#0f172a\">冷水溶解度低：only slightly soluble in cold water</text>\n  <text x=\"576\" y=\"194\" text-anchor=\"middle\" font-size=\"11.3\" font-weight=\"800\" fill=\"#dc2626\">🚨 严禁画反成 —CO—OCH₃（冬青油 methyl salicylate 零分！）</text>\n</svg>\n<div class=\"b-note\" style=\"margin-top:8px;\">📌 <strong>官能团检验联动</strong>：<code>Aspirin</code> 含 <code>carboxyl group (—COOH)</code> 与 <code>ester group (—OCOCH₃)</code>；投入 <code>NaHCO₃(aq)</code> 会产生无色气泡（<strong>colourless gas bubbles / effervescence, CO₂</strong>），而大苯环使其在冷水中仅<strong>微溶（slightly soluble）</strong>。</div>\n", "start": 0.25, "end": 79.07}, {"id": "b1_2", "tag": "板书 2 · 药效与改良 (33.1B)", "title": "Aspirin 的四大医疗用途、刺激胃壁成因与药剂学改良方案", "html": "\n<table class=\"b-mini-table\">\n  <thead>\n    <tr>\n      <th>考查维度</th>\n      <th>HKEAA 标准英文采分表述（Mandatory Medical &amp; Chemical Terms）</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>① 四大医疗用途<br>（Medical Uses）</strong></td>\n      <td>\n        • <strong><code>Analgesic</code></strong> (<code>painkiller</code>)：止痛（缓解头痛、牙痛、肌肉酸痛）；<br>\n        • <strong><code>Antipyretic</code></strong> (<code>fever reducer</code>)：退烧降温；<br>\n        • <strong><code>Anti-inflammatory agent</code></strong>：消炎消肿（治疗关节炎 <code>arthritis</code>）；<br>\n        • <strong>Daily <code>low-dose</code> therapy</strong>：<strong><code>Preventing heart attacks and strokes</code></strong>（抑制血栓形成）！\n      </td>\n    </tr>\n    <tr>\n      <td><strong>② 主要副作用与成因<br>（[1M] 必背原因）</strong></td>\n      <td>\n        • <strong>副作用</strong>：<strong><code>Irritates the stomach lining</code></strong>（刺激胃壁，严重致胃溃疡/胃出血；儿童病毒感染忌服防 <code>Reye's syndrome</code>）。<br>\n        • <strong>化学成因 [1M]</strong>：Because <code>aspirin</code> still contains a <strong><code>carboxyl group</code> (<code>—COOH</code>)</strong> and is <strong><code>acidic</code></strong>!\n      </td>\n    </tr>\n    <tr>\n      <td><strong>③ 药剂改良方案<br>（Formulation Fixes）</strong></td>\n      <td>\n        • <strong>饭后服用（Take after meals）</strong>缓冲酸性；• <strong><code>Buffered aspirin</code></strong>（复配少量 <strong><code>antacid</code></strong> 如 <code>CaCO₃</code> / <code>MgCO₃</code> / <code>Al(OH)₃</code>）；<br>\n        • <strong><code>Soluble aspirin</code></strong>（制成可溶钙盐/钠盐）；• <strong><code>Enteric-coated aspirin</code></strong>（耐酸肠溶衣，直达弱碱性小肠才崩解释放）！\n      </td>\n    </tr>\n  </tbody>\n</table>\n", "start": 79.69, "end": 161.544}, {"id": "b1_3", "tag": "板书 3 · 1:2 返滴定分析 (33.2)", "title": "为何不能室温直接滴定？严守课本 1:2 水解铁律与“一乘十、二除二”流水线", "html": "\n<div class=\"board-grid-2\" style=\"margin-bottom:10px;\">\n  <div class=\"b-box b-rose\">\n    <div class=\"b-box-title\">❌ 为何不能室温用 NaOH(aq) 直接滴定？[2M]</div>\n    <ul class=\"b-points\">\n      <li><strong>[1M 溶解慢]</strong> <code>Aspirin</code> is <strong>only <code>slightly soluble</code> in cold water</strong> (slow neutralization).</li>\n      <li><strong>[1M 半途水解]</strong> Its <strong><code>ester group</code> undergoes slow, incomplete <code>partial hydrolysis</code></strong>, giving no sharp <code>end point</code>!</li>\n    </ul>\n  </div>\n  <div class=\"b-box b-blue\">\n    <div class=\"b-box-title\">✅ Back Titration 课本 <code>1 : 2</code> 摩尔比铁律！</div>\n    <div class=\"b-eq\">C<sub>6</sub>H<sub>4</sub>(COOH)(OCOCH<sub>3</sub>) + <strong>2 NaOH</strong> ⟶ C<sub>6</sub>H<sub>4</sub>(COO<sup>−</sup>Na<sup>+</sup>)(OH) + CH<sub>3</sub>COO<sup>−</sup>Na<sup>+</sup> + H<sub>2</sub>O</div>\n    <p class=\"b-tip-text\">🚨 <strong>严禁超纲写 1:3！</strong>滴定剩余碱用 <code>HCl(aq)</code> + <code>phenolphthalein</code>：<strong>from pink (or red) to colourless</strong>！</p>\n  </div>\n</div>\n<div class=\"b-scheme\">\n<pre>【HKDSE 返滴定四步满分流水线（1.50 g 药片示范：25.0 cm³ 1.00 M NaOH 共沸 ➔ 定容 250.0 cm³ ➔ 取 25.0 cm³ 耗 12.60 cm³ 0.100 M HCl）】\n  Step 1 (总投入碱) : n(NaOH)_initial = 1.00 × (25.0 ÷ 1000) = 0.0250 mol\n  Step 2 (查乘十！) : n(NaOH)_unreacted (in 250.0 cm³) = (0.100 × 0.01260) × (250.0 ÷ 25.0) = 0.0126 mol  [★ 若整锅直接滴则不乘 10!]\n  Step 3 (必除以 2!): n(NaOH)_reacted = 0.0250 − 0.0126 = 0.0124 mol  ══▶  n(aspirin) = 0.0124 ÷ 2 = 0.00620 mol !\n  Step 4 (质量分数) : Mass = 0.00620 × 180.0 = 1.116 g  ══▶  % by mass = (1.116 ÷ 1.50) × 100% = 74.4% （若超过 100% 必漏除以 2！）</pre>\n</div>\n", "start": 162.164, "end": 279.27}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🎯 单元导学 · 从柳树皮水杨酸到百年名药", "boardId": "b1_1", "displayHtml": "同学们好，欢迎来到《Mastering Chemistry》Book 3B、Topic 8 的压轴收官单元——<strong>Unit 33：<em>Important Organic Substances</em>（重要的有机物质）</strong>！第一站我们走进医药柜认识百年合成名药 <strong><code>aspirin</code>（<code>acetylsalicylic acid</code>，<code>C₉H₈O₄</code>，<code>M = 180.0 g mol⁻¹</code>）</strong>：古人嚼柳树皮止痛靠的是 <code>salicylic acid</code>（<code>2-hydroxybenzoic acid</code>），但它直接裸露酚羟基且酸性太强会灼伤胃壁，化学家便通过 <code>esterification</code> 把羟基封成酯基，诞生了温和得多的阿司匹林！", "start": 0.25, "end": 40.646}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 结构红线 · 三大部件与氧连苯环铁律", "boardId": "b1_1", "displayHtml": "请盯紧<strong>第 1 张板书</strong>右侧结构（闭眼听课的同学请在脑海画一个六边形苯环）：<code>aspirin</code> 是 1,2-邻位二取代 <strong><code>benzene ring</code></strong>，1 号位连着显酸性的 <strong><code>carboxyl group (—COOH)</code></strong>（遇 <code>NaHCO₃(aq)</code> 冒 <code>CO₂</code> 气泡），2 号位连着可水解的 <strong><code>ester group (—OCOCH₃)</code></strong>，大苯环使它在冷水中仅<strong>微溶（<code>only slightly soluble</code>）</strong>。头号红线：<strong>必须是单键氧原子直接连在苯环上</strong>，严禁画反成羰基连苯环的冬青油 <code>methyl salicylate</code>！", "start": 40.986, "end": 79.07}, {"speaker": "teacher", "role": "concept", "stepTag": "💊 医药必背 · 四大标准英文医疗用途", "boardId": "b1_2", "displayHtml": "切换到<strong>第 2 张板书</strong>，把 <code>aspirin</code> 的四大英文药效拼准：① 止痛药 <strong><code>analgesic</code></strong>（<code>painkiller</code>）；② 退烧药 <strong><code>antipyretic</code></strong>（<code>fever reducer</code>）；③ 消炎药 <strong><code>anti-inflammatory agent</code></strong>（治疗关节炎 <code>arthritis</code>）；④ 心血管高危长者每日服用的低剂量疗法（<code>daily low-dose therapy</code>），用于抑制血小板凝集血栓，<strong><code>preventing heart attacks and strokes</code>（预防心脏病发作与中风）</strong>！", "start": 79.69, "end": 118.768}, {"speaker": "teacher", "role": "concept", "stepTag": "🛡️ 护胃改良 · 酸性成因与肠溶抗酸设计", "boardId": "b1_2", "displayHtml": "考官紧接着必追问空腹吃 <code>aspirin</code> 为何伤胃？1 分标准答案直击结构：因为它仍保留着 <strong><code>carboxyl group (—COOH)</code></strong>，本身是 <strong><code>acidic</code></strong>，会 <strong><code>irritate the stomach lining</code>（刺激胃壁）</strong>甚至引发胃溃疡出血（儿童病毒感染亦忌服以防罕见 <code>Reye's syndrome</code>）。为此药厂推出饭后服用、复配 <code>antacid</code> 的 <strong><code>buffered aspirin</code></strong>、水溶性盐 <strong><code>soluble aspirin</code></strong>，以及裹上耐酸包衣直达小肠才溶解的 <strong><code>enteric-coated aspirin</code></strong>！", "start": 119.108, "end": 161.544}, {"speaker": "teacher", "role": "concept", "stepTag": "🔬 定量破局 · 为何必须采用返滴定法", "boardId": "b1_3", "displayHtml": "进入<strong>第 3 张板书</strong>攻克药片含量测定！为何不能把药片泡冷水直接用 <code>NaOH(aq)</code> 室温滴定？背熟两分满分答案：① <code>aspirin</code> 在冷水中 <strong><code>only slightly soluble</code></strong>，中和极慢；② <code>NaOH</code> 还会令旁边的 <strong><code>ester group</code> 发生缓慢不完全的 <code>partial hydrolysis</code></strong>，导致终点模糊无法测准！因此必须改用 <strong><code>back titration</code>（返滴定法）</strong>：先加已知且<strong>过量（<code>in excess</code>）</strong>的 <code>NaOH(aq)</code> 共沸煮透，冷却后加 <strong><code>phenolphthalein</code></strong>，用标准 <code>HCl(aq)</code> 滴至 <strong><code>from pink to colourless</code></strong>！", "start": 162.164, "end": 201.152}, {"speaker": "teacher", "role": "trap", "stepTag": "🚨 课本铁律 · 严守 1:2 化学计量比红线", "boardId": "b1_3", "displayHtml": "这里有一条关乎整道大题生死的红线：在 HKDSE《Mastering Chemistry》课本与考评局标准下，<strong><code>1 mol aspirin</code> 与热 <code>NaOH(aq)</code> 共沸反应严格消耗 <code>2 mol NaOH</code></strong>（1 mol 中和 <code>—COOH</code>，1 mol 碱性水解 <code>—OCOCH₃</code> 酯键，生成 <code>C₆H₄(COO⁻Na⁺)(OH)</code> 与 <code>CH₃COO⁻Na⁺</code>）！<strong>严禁被大学有机教材误导写成 <em>1 : 3</em></strong>，否则整道计算题直接判零分！", "start": 201.492, "end": 238.292}, {"speaker": "teacher", "role": "example", "stepTag": "🧮 计算口诀 · “一乘十、二除二”防翻车", "boardId": "b1_3", "displayHtml": "算题时牢记四字真言——<strong>“一乘十、二除二”</strong>！① 先审清煮后溶液是整锅直接滴定（不乘倍数），还是定容进 <code>250.0 cm³ volumetric flask</code> 再用 <code>pipette</code> 取 <code>25.0 cm³</code> 滴定（剩余碱必须<strong>乘回 <code>10</code> 倍</strong>！）；② 初始碱减去总剩余碱得 <code>n(NaOH)_reacted</code> 后，<strong>必须立刻除以 <code>2</code></strong> 才是 <code>n(aspirin)</code>！板书例题算出 <code>74.4%</code>，若考场上算出超过 <code>100%</code>，一秒警醒：肯定漏除以 <code>2</code> 了！", "start": 238.632, "end": 279.27}], "quickChecks": [{"q": "在 HKDSE 实验中，测定商用止痛片中 aspirin（C₆H₄(COOH)(OCOCH₃)）含量时采用返滴定法（back titration）。下列有关该实验的说法哪一项完全正确？", "options": ["A. 1 mol aspirin 与过量热 NaOH(aq) 完全反应时消耗 1 mol NaOH", "B. 1 mol aspirin 与过量热 NaOH(aq) 完全反应时消耗 2 mol NaOH", "C. 用标准 HCl(aq) 滴定剩余 NaOH(aq) 时，phenolphthalein 指示剂由无色变为粉红色", "D. 不能室温直接滴定是因为 aspirin 与冷 NaOH(aq) 完全不发生任何反应"], "ans": 1, "exp": "在 HKDSE《Mastering Chemistry》标准下，1 mol aspirin 含 1 mol —COOH 和 1 mol —OCOCH₃ 酯基，共消耗 2 mol 热 NaOH(aq)（B 正确，A 错）；锥形瓶初始呈碱性，故 phenolphthalein 终点由粉红色变为无色 from pink to colourless（C 错）；不能室温直接滴定是因为 aspirin 在冷水中微溶且酯基发生缓慢不完全的 partial hydrolysis（D 错）。"}, {"q": "将一颗 0.600 g 的 aspirin 药片（M = 180.0 g mol⁻¹）与 25.0 cm³ 的 0.500 mol dm⁻³ NaOH(aq)（过量）共沸后冷却，整份混合液（entire mixture）恰好需用 6.50 cm³ 的 1.00 mol dm⁻³ HCl(aq) 滴定至终点。药片中 aspirin 的质量百分比是多少？", "options": ["A. 45.0%", "B. 75.0%", "C. 90.0%", "D. 180.0%"], "ans": 2, "exp": "初始 n(NaOH) = 0.500 × 0.0250 = 0.0125 mol；因整份溶液直接滴定（无 ×10 稀释），剩余 n(NaOH) = n(HCl) = 1.00 × 0.00650 = 0.00650 mol；已反应的 n(NaOH) = 0.0125 − 0.00650 = 0.00600 mol。按 1:2 摩尔比，n(aspirin) = 0.00600 ÷ 2 = 0.00300 mol，质量 = 0.00300 × 180.0 = 0.540 g，质量百分比 = (0.540 ÷ 0.600) × 100% = 90.0%。"}], "duration": 279.72, "audioFile": "audio/01_33.1-33.2_阿司匹林结构药效与返滴定分析.mp3", "fullStart": 0.0, "fullEnd": 279.72}, {"id": "ep2", "epNum": "第 2 讲", "code": "33.3 – 33.6", "fileSlug": "02_33.3-33.6_肥皂与无皂清洁剂结构及乳化去污机理", "titleZh": "肥皂（Soaps）与无皂清洁剂的两亲结构、润湿与四步乳化去污机理", "titleEn": "Structures of Soaps & Soapless Detergents, Wetting Property and Emulsifying Action", "goal": "区分肥皂（soaps, 含 —COO⁻）与无皂清洁剂（soapless detergents, 含 —SO₃⁻ 或 —OSO₃⁻）的原料来源与两亲“小蝌蚪”阴离子结构，理解降低水表面张力（surface tension）的润湿性质，一字不漏背熟 HKEAA 四步乳化去污（emulsifying action）满分英文模板与油滴作图规范。", "keyTerms": [{"en": "soap vs soapless detergent", "zh": "肥皂 vs 无皂清洁剂"}, {"en": "hydrophobic hydrocarbon tail", "zh": "疏水烃基尾巴（溶入油脂）"}, {"en": "hydrophilic anionic head", "zh": "亲水阴离子头部（留于水中）"}, {"en": "surface tension & wetting agent", "zh": "表面张力与润湿剂"}, {"en": "oil-in-water emulsion", "zh": "水包油乳浊液"}, {"en": "repel & prevent coalescing", "zh": "同种负电相斥防重新聚结"}], "boards": [{"id": "b2_1", "tag": "板书 1 · 两亲结构对比 (33.3–33.4)", "title": "Soaps vs Soapless Detergents：工业原料与“两亲小蝌蚪”阴离子头部辨身术", "html": "\n<div class=\"b-scheme\">\n<pre>【清洁剂阴离子 Detergent Anion 的共同两亲模型（Amphiphilic Tadpole Model）】\n   ╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲╱╲──( ⊖ )   (+ Na⁺ / K⁺)\n   └──────────┬──────────┘  └──┬──┘\n  Hydrophobic hydrocarbon     Hydrophilic anionic head\n           tail               (亲水阴离子头部：离子基团，溶于极性 water；书写化学式必带负号 ⁻ ！)\n  (疏水烃基尾巴：长非极性碳链，溶于非极性 grease / oil)</pre>\n</div>\n<table class=\"b-mini-table\">\n  <thead>\n    <tr>\n      <th>对比维度</th>\n      <th><strong>Soaps（肥皂）</strong></th>\n      <th><strong>Soapless Detergents（无皂清洁剂）</strong></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>制造原料</strong></td>\n      <td>天然 <strong><code>animal fats</code> &amp; <code>vegetable oils</code></strong>（可再生 <code>renewable</code>）</td>\n      <td>源自 <strong><code>petroleum</code>（石油馏分）</strong>（不可再生 <code>non-renewable</code>）</td>\n    </tr>\n    <tr>\n      <td><strong>亲水阴离子头<br>（必带负号 <code>⁻</code>！）</strong></td>\n      <td><strong><code>Carboxylate group</code> (<code>—COO⁻</code>)</strong></td>\n      <td><strong><code>Sulphonate group</code> (<code>—SO₃⁻</code>)</strong> 或 <strong><code>Sulphate group</code> (<code>—OSO₃⁻</code>)</strong></td>\n    </tr>\n    <tr>\n      <td><strong>教材代表例子</strong></td>\n      <td><code>CH₃(CH₂)₁₆COO⁻Na⁺</code> (<code>sodium stearate</code>)</td>\n      <td><code>CH₃(CH₂)₁₁—C₆H₄—SO₃⁻Na⁺</code> 或 <code>CH₃(CH₂)₁₁—OSO₃⁻Na⁺</code></td>\n    </tr>\n  </tbody>\n</table>\n", "start": 0.25, "end": 73.038}, {"id": "b2_2", "tag": "板书 2 · 润湿性质与选拔尺 (33.5)", "title": "Wetting Property（降低水的 Surface Tension）与去污分子“双条件”秒杀尺", "html": "\n<div class=\"board-grid-2\">\n  <div class=\"b-box b-blue\">\n    <div class=\"b-box-title\">① Wetting Property（充当 Wetting Agent）</div>\n    <div class=\"b-eq\">Pure water（高 surface tension 聚成水珠） ⟶ 加 Detergent 迅速铺展润湿！</div>\n    <ul class=\"b-points\">\n      <li>纯水因强 <code>intermolecular hydrogen bonds</code> 具有很高 <strong><code>surface tension</code>（表面张力）</strong>。</li>\n      <li><strong>[1M 采分句]</strong> A <code>detergent</code> <strong>lowers the <code>surface tension</code> of water</strong>, enabling water to spread out easily and wet the surface thoroughly.</li>\n    </ul>\n  </div>\n  <div class=\"b-box b-amber\">\n    <div class=\"b-box-title\">② 选择题去污能力（Cleansing Property）双标尺</div>\n    <div class=\"b-eq\">✅ <strong>长非极性烃链（≥ C₁₂）</strong> ＋ <strong>离子型亲水头（带电荷！）</strong></div>\n    <ul class=\"b-points\">\n      <li><code>CH₃COO⁻Na⁺</code>：❌ <code>CH₃—</code> 碳链太短，无法溶入 <code>grease</code>！</li>\n      <li><code>CH₃(CH₂)₁₆CH₃</code> / <code>CH₃(CH₂)₁₄COOCH₃</code>：❌ 无带电离子亲水头！</li>\n      <li><code>CH₃(CH₂)₁₁OSO₃⁻Na⁺</code>：✅ 长烃尾 + <code>—OSO₃⁻</code> 离子头，去污力强！</li>\n    </ul>\n  </div>\n</div>\n", "start": 73.658, "end": 162.188}, {"id": "b2_3", "tag": "板书 3 · 四步乳化去污机理 (33.6)", "title": "Emulsifying Action 四步满分模板与微油滴（Oil Droplets）负电相斥 SVG 图解", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 235\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"清洁剂四步乳化去污及微油滴同种负电荷互相排斥示意图\">\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"235\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"23\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1e3a8a\">清洁剂乳化去污四步连环画（Physical Emulsification — 纯物理过程，无化学断键！）</text>\n\n  <!-- Panel 1 -->\n  <rect x=\"14\" y=\"36\" width=\"228\" height=\"185\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/>\n  <rect x=\"14\" y=\"36\" width=\"228\" height=\"26\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"128\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#1d4ed8\">① 尾溶油污、头留水相</text>\n  <rect x=\"30\" y=\"156\" width=\"196\" height=\"12\" rx=\"3\" fill=\"#94a3b8\"/>\n  <path d=\"M56,156 Q128,108 200,156 Z\" fill=\"#fde047\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/>\n  <text x=\"128\" y=\"150\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#854d0e\">Grease 油污</text>\n  <!-- Tadpoles -->\n  <polyline points=\"88,96 92,108 86,120 94,132\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"88\" cy=\"89\" r=\"8\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <text x=\"88\" y=\"93\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n\n  <polyline points=\"128,88 132,102 125,115 131,128\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"128\" cy=\"81\" r=\"8\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <text x=\"128\" y=\"85\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n\n  <polyline points=\"168,96 164,108 170,120 162,132\" fill=\"none\" stroke=\"#334155\" stroke-width=\"1.8\"/>\n  <circle cx=\"168\" cy=\"89\" r=\"8\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.5\"/>\n  <text x=\"168\" y=\"93\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <text x=\"128\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">尾巴插入 grease，负电头留于 water</text>\n  <text x=\"128\" y=\"205\" text-anchor=\"middle\" font-size=\"10.8\" font-weight=\"700\" fill=\"#1d4ed8\">Na⁺ 游离在外侧水中（勿画入油内！）</text>\n\n  <!-- Panel 2 -->\n  <rect x=\"254\" y=\"36\" width=\"212\" height=\"185\" rx=\"10\" fill=\"#ffffff\" stroke=\"#5eead4\" stroke-width=\"1.5\"/>\n  <rect x=\"254\" y=\"36\" width=\"212\" height=\"26\" rx=\"10\" fill=\"#ccfbf1\"/>\n  <text x=\"360\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#0f766e\">② 搓洗搅拌剥离成微滴</text>\n  <rect x=\"272\" y=\"156\" width=\"176\" height=\"12\" rx=\"3\" fill=\"#94a3b8\"/>\n  <circle cx=\"360\" cy=\"112\" r=\"24\" fill=\"#fde047\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/>\n  <text x=\"360\" y=\"116\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"800\" fill=\"#854d0e\">微油滴</text>\n  <circle cx=\"360\" cy=\"78\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"360\" y=\"82\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <circle cx=\"394\" cy=\"112\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"394\" y=\"116\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <circle cx=\"326\" cy=\"112\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"326\" y=\"116\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <circle cx=\"384\" cy=\"88\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"384\" y=\"92\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <circle cx=\"336\" cy=\"88\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"336\" y=\"92\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <circle cx=\"360\" cy=\"145\" r=\"7\" fill=\"#fee2e2\" stroke=\"#dc2626\" stroke-width=\"1.4\"/><text x=\"360\" y=\"149\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <text x=\"360\" y=\"188\" text-anchor=\"middle\" font-size=\"11\" fill=\"#334155\">Upon agitation / rubbing</text>\n  <text x=\"360\" y=\"205\" text-anchor=\"middle\" font-size=\"10.8\" font-weight=\"700\" fill=\"#0f766e\">掀离表面，碎成带负电 tiny oil droplets</text>\n\n  <!-- Panel 3 -->\n  <rect x=\"478\" y=\"36\" width=\"288\" height=\"185\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fda4af\" stroke-width=\"1.8\"/>\n  <rect x=\"478\" y=\"36\" width=\"288\" height=\"26\" rx=\"10\" fill=\"#ffe4e6\"/>\n  <text x=\"622\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#be123c\">③④ 负电相斥防聚结 ➔ 稳定乳浊液</text>\n  <!-- Droplet Left -->\n  <circle cx=\"548\" cy=\"115\" r=\"22\" fill=\"#fde047\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/>\n  <line x1=\"548\" y1=\"93\" x2=\"548\" y2=\"104\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"548\" cy=\"85\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"548\" y=\"89\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"548\" y1=\"137\" x2=\"548\" y2=\"126\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"548\" cy=\"145\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"548\" y=\"149\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"526\" y1=\"115\" x2=\"537\" y2=\"115\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"518\" cy=\"115\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"518\" y=\"119\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"570\" y1=\"115\" x2=\"559\" y2=\"115\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"578\" cy=\"115\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"578\" y=\"119\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <!-- Droplet Right -->\n  <circle cx=\"696\" cy=\"115\" r=\"22\" fill=\"#fde047\" stroke=\"#ca8a04\" stroke-width=\"1.5\"/>\n  <line x1=\"696\" y1=\"93\" x2=\"696\" y2=\"104\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"696\" cy=\"85\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"696\" y=\"89\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"696\" y1=\"137\" x2=\"696\" y2=\"126\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"696\" cy=\"145\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"696\" y=\"149\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"674\" y1=\"115\" x2=\"685\" y2=\"115\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"666\" cy=\"115\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"666\" y=\"119\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <line x1=\"718\" y1=\"115\" x2=\"707\" y2=\"115\" stroke=\"#334155\" stroke-width=\"1.6\"/><circle cx=\"726\" cy=\"115\" r=\"6.5\" fill=\"#fee2e2\" stroke=\"#dc2626\"/><text x=\"726\" y=\"119\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"800\" fill=\"#dc2626\">−</text>\n  <!-- Repel arrows -->\n  <text x=\"622\" y=\"108\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#dc2626\">◀─ Repel! ─▶</text>\n  <text x=\"622\" y=\"126\" text-anchor=\"middle\" font-size=\"10.2\" font-weight=\"700\" fill=\"#be123c\">同种负电排斥</text>\n  <text x=\"622\" y=\"186\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#be123c\">★ 阻止重新合并 prevent coalescing！</text>\n  <text x=\"622\" y=\"205\" text-anchor=\"middle\" font-size=\"10.8\" font-weight=\"700\" fill=\"#0f172a\">形成稳定 oil-in-water emulsion 随水冲走</text>\n</svg>\n<div class=\"b-quote\" style=\"margin-top:8px; margin-bottom:0;\">\n  <div class=\"b-quote-en\"><strong>[4M Standard Template]</strong> ① <code>Hydrophobic hydrocarbon tails</code> dissolve in <code>grease</code> while <code>hydrophilic anionic heads</code> remain in <code>water</code>; ② Upon <code>agitation</code>, grease breaks into tiny negatively charged <code>oil droplets</code>; ③ <strong>Like negative charges <code>repel one another</code>, preventing droplets from <code>coalescing</code></strong>; ④ A stable <strong><code>oil-in-water emulsion</code></strong> is formed and rinsed away.</div>\n</div>\n", "start": 162.808, "end": 290.612}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🫧 家族辨析 · 肥皂与无皂清洁剂的两亲小蝌蚪", "boardId": "b2_1", "displayHtml": "欢迎来到第 2 讲！走进厨房与洗衣房，所有清洁剂统称 <strong><code>detergents</code></strong>，分为两大门派：用可再生天然动植物油脂（<code>animal fats and vegetable oils</code>）制造的 <strong><code>soaps</code>（肥皂）</strong>，和用不可再生石油（<code>petroleum</code>）化工制造的 <strong><code>soapless detergents</code>（无皂清洁剂）</strong>。看<strong>第 1 张板书</strong>：真正干活的阴离子都长成“小蝌蚪”——长碳氢链是溶入油污的 <strong><code>hydrophobic hydrocarbon tail</code></strong>，带负电圆头是留在水里的 <strong><code>hydrophilic anionic head</code></strong>！", "start": 0.25, "end": 36.612}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 头部辨身 · 认准官能团与必带负电荷符号", "boardId": "b2_1", "displayHtml": "怎样一秒分辨陌生结构属于哪一派？只看圆脑袋姓什么！脑袋是羧酸根 <strong><code>carboxylate group (—COO⁻)</code></strong>（如 <code>sodium stearate</code>）的，100% 是 <strong><code>soap</code></strong>；脑袋带硫原子——磺酸根 <strong><code>sulphonate group (—SO₃⁻)</code></strong> 或硫酸酯根 <strong><code>sulphate group (—OSO₃⁻)</code></strong> 的，100% 是 <strong><code>soapless detergent</code></strong>！切记考场红线：单独写出 <code>hydrophilic head</code> 化学式时，<strong>右上角负号 <code>⁻</code> 绝不能漏</strong>！", "start": 36.952, "end": 73.038}, {"speaker": "teacher", "role": "concept", "stepTag": "💧 润湿性质 · 松绑氢键降低水的表面张力", "boardId": "b2_2", "displayHtml": "切换到<strong>第 2 张板书</strong>左框看第一项看家本领——<strong><code>wetting property</code>（润湿性质）</strong>！纯水滴在涂蜡表面或新布料上会缩成水珠滚走，因为水分子间强氢键产生极高的 <strong><code>surface tension</code>（表面张力）</strong>。加入 <code>detergent</code> 充当 <strong><code>wetting agent</code></strong> 后，能显著 <strong><code>lower the surface tension of water</code></strong>，让水珠瞬间摊平铺展（<code>spread out easily</code>），彻底浸透纤维缝隙！", "start": 73.658, "end": 115.158}, {"speaker": "teacher", "role": "example", "stepTag": "📏 秒杀标尺 · 去污分子缺一不可的双条件", "boardId": "b2_2", "displayHtml": "再看板书右框的选择题秒杀尺：具备良好 <strong><code>cleansing property</code></strong> 必须同时集齐<strong>① 足够长的非极性烃基链（约 12 碳以上）</strong>与<strong>② 带电荷的离子亲水头</strong>！像 <code>CH₃COO⁻Na⁺</code> 甲基太短扎不进油污，淘汰；像十八烷 <code>CH₃(CH₂)₁₆CH₃</code> 和中性长链酯 <code>CH₃(CH₂)₁₄COOCH₃</code> 没有带电离子头，水拉不动它，淘汰；只有兼备长烃链与 <code>—OSO₃⁻</code> 的选手才能高效去污！", "start": 115.498, "end": 162.188}, {"speaker": "teacher", "role": "concept", "stepTag": "🏆 四步模板 ①② · 尾溶油头留水与搅拌剥离", "boardId": "b2_3", "displayHtml": "聚焦<strong>第 3 张板书</strong>的 SVG 连环画，这是整本 Book 3B 最值钱的 4 分英文模板——<strong><code>emulsifying action</code>（乳化去污机理）</strong>！前两步按画面直译：<strong>第 1 分</strong>，清洁剂阴离子的 <strong><code>hydrophobic hydrocarbon tails</code> 溶入 <code>grease</code></strong>，而 <strong><code>hydrophilic anionic heads</code> 留在外围 <code>water</code> 中</strong>；<strong>第 2 分</strong>，经搓洗摇晃（<strong><code>upon agitation / rubbing</code></strong>），水拽着亲水头将油污掀离表面，撕碎成微小的带负电油滴（<strong><code>tiny negatively charged oil droplets</code></strong>）！", "start": 162.808, "end": 198.876}, {"speaker": "teacher", "role": "trap", "stepTag": "🏆 四步模板 ③④ · 同种负电荷相斥防重新聚结", "boardId": "b2_3", "displayHtml": "全班敲黑板盯住第 3 格图——这是十个考生七个漏答的<strong>关键第 3 分</strong>！为什么小油滴静置后不会重新撞在一起变回大油层？因为每颗微油滴外表面都布满了负电荷，<strong>同种负电荷互相排斥（<code>like negative charges repel one another</code>），阻止小油滴重新合并聚结（<code>preventing the droplets from coalescing</code>）</strong>！<strong>第 4 分</strong>，由此形成稳定的乳白色 <strong><code>oil-in-water emulsion</code>（水包油乳浊液）</strong>，随水流轻松冲走！", "start": 199.216, "end": 241.92}, {"speaker": "teacher", "role": "trap", "stepTag": "🎨 作图与概念红线 · 纯物理过程与油滴画法", "boardId": "b2_3", "displayHtml": "收尾前再防两道暗箭：① 洗洁精乳化去油是纯粹的 <strong><code>physical process</code>（物理过程）</strong>，油分子绝未发生化学断键反应！② 考场画被乳化的 <code>oil droplet</code> 示意图时严守三军规：锯齿状 <code>hydrophobic tails</code> <strong>必须插在油滴圆圈内部</strong>；带负号的圆头 <code>⊖</code> <strong>必须露在圆圈外侧水相</strong>（放射状画 6–8 根）；<strong>切勿把 <code>Na⁺</code> 画进油滴肚子里</strong>！下一讲我们亲手用油脂煮肥皂，再探硬水浮渣与环保大题！", "start": 242.26, "end": 290.612}], "quickChecks": [{"q": "下列哪一种物质在水溶液中具备良好的去污性质（cleansing properties），且属于无皂清洁剂（soapless detergent）？", "options": ["A. CH₃(CH₂)₁₆COO⁻Na⁺", "B. CH₃CH₂SO₃⁻Na⁺", "C. CH₃(CH₂)₁₁OSO₃⁻Na⁺", "D. CH₃(CH₂)₁₄COOCH₃"], "ans": 2, "exp": "具备去污力须兼备长烃基链与离子亲水头：A 含 —COO⁻ 属肥皂（soap）而非无皂清洁剂；B 乙基碳链过短无去污力；D 为中性酯无带电离子头；C 兼备 C₁₂ 长疏水烃链与硫酸酯根离子头 —OSO₃⁻，属典型 soapless detergent！"}, {"q": "用含清洁剂的水清洗沾有油污的餐盘时，形成微小油滴（tiny oil droplets）后不会重新聚结（coalesce）成大油层，其核心原因是什么？", "options": ["A. 清洁剂与油脂发生皂化化学反应生成可溶的甘油", "B. 清洁剂的疏水烃基尾巴朝向外部水相，形成空间阻隔", "C. 微油滴外表面布满亲水阴离子头而带同种负电荷，彼此互相排斥（repel one another）", "D. 清洁剂增大了水的表面张力（surface tension），把油滴锁在水中"], "ans": 2, "exp": "清洁剂疏水尾巴溶入油滴内部，带负电的亲水阴离子头（—COO⁻ 或 —SO₃⁻）留在油滴外表面，使每颗微油滴表面带负电；同种负电荷互相排斥（like negative charges repel one another），阻止油滴重新聚结（coalescing）。乳化属物理过程且清洁剂会降低水的表面张力。"}], "duration": 291.06, "audioFile": "audio/02_33.3-33.6_肥皂与无皂清洁剂结构及乳化去污机理.mp3", "fullStart": 281.22, "fullEnd": 572.28}, {"id": "ep3", "epNum": "第 3 讲", "code": "33.7 – 33.8", "fileSlug": "03_33.7-33.8_油脂皂化盐析硬水浮渣与水体环保", "titleZh": "动植物油脂结构、皂化与盐析制皂、硬水浮渣及水体环境影响", "titleEn": "Fats & Oils, Saponification & Salting Out, Hard Water Scum and Environmental Impacts", "goal": "认清动植物油脂同属甘油三酯（triglycerides / triesters）并从分子间作用力解释固液物态差异，掌握 1:3 皂化反应（saponification）与浓食盐水盐析（salting out）制皂原理，熟写硬水浮渣（scum）2:1 离子方程式并吃透生物降解与溶解氧（dissolved oxygen）环保采分链。", "keyTerms": [{"en": "triglyceride / triester", "zh": "甘油三酯 / 三酯"}, {"en": "propane-1,2,3-triol (glycerol)", "zh": "丙-1,2,3-三醇（甘油）"}, {"en": "saponification (1 : 3 ratio)", "zh": "皂化反应（碱性水解）"}, {"en": "salting out (conc. NaCl)", "zh": "盐析（降低肥皂溶解度）"}, {"en": "hard water & scum", "zh": "硬水 (Ca²⁺/Mg²⁺) 与浮渣"}, {"en": "biodegradable & dissolved oxygen", "zh": "可生物降解与溶解氧耗尽"}], "boards": [{"id": "b3_1", "tag": "板书 1 · 油脂结构与熔点 (33.7A)", "title": "Animal Fats vs Vegetable Oils：统一 Triester 本质与饱和/顺式弯折碳链固液之谜", "html": "\n<div class=\"b-scheme\">\n<pre>【天然油脂统一本质：1 分子 Propane-1,2,3-triol (Glycerol) + 3 分子长链 Fatty Acids 形成的 Triester！】\n   CH₂—O—C(=O)R¹\n   │\n   CH —O—C(=O)R²    ◀ 竖向三碳骨架源自 propane-1,2,3-triol；R¹, R², R³ 为长碳氢链（约 C₁₁–C₁₉）\n   │\n   CH₂—O—C(=O)R³</pre>\n</div>\n<div class=\"board-grid-2\">\n  <div class=\"b-box b-amber\">\n    <div class=\"b-box-title\">🥩 Animal Fats（动物脂肪：室温呈固态，高 m.p.）</div>\n    <ul class=\"b-points\">\n      <li>主要含 <strong><code>saturated</code> hydrocarbon chains</strong>（全单键规整锯齿直链）。</li>\n      <li><strong>[2M 采分]</strong> Regular chains <strong><code>pack closely together</code></strong> ➔ <strong>stronger intermolecular <code>van der Waals' forces</code></strong>!</li>\n    </ul>\n  </div>\n  <div class=\"b-box b-teal\">\n    <div class=\"b-box-title\">🫒 Vegetable Oils（植物油：室温呈液态，低 m.p.）</div>\n    <ul class=\"b-points\">\n      <li>富含 <strong><code>unsaturated</code> (<code>cis</code> <code>C=C</code>) chains</strong>（顺式双键造成弯折 <code>kinks</code>）。</li>\n      <li>弯折链使分子 <strong><code>cannot pack closely together</code></strong> ➔ <strong>weaker <code>van der Waals' forces</code></strong>!</li>\n    </ul>\n  </div>\n</div>\n", "start": 0.25, "end": 76.072}, {"id": "b3_2", "tag": "板书 2 · 皂化与盐析制皂 (33.7B)", "title": "实验室制肥皂三部曲：1:3 Saponification 共沸与浓食盐水 Salting Out 满分句", "html": "\n<div class=\"b-scheme\">\n<pre>【皂化反应标准方程式（Saponification：1 mol Fat/Oil 消耗 3 mol NaOH，生成 Glycerol + 3 mol Soap！）】\n   CH₂—O—C(=O)R                                    CH₂—OH\n   │                       conc. NaOH(aq), heat    │\n   CH —O—C(=O)R  +  3 NaOH(aq)  ──────────────▶    CH —OH       +   3 RCOO⁻Na⁺\n   │                                               │                 (soap 肥皂!)\n   CH₂—O—C(=O)R                                    CH₂—OH (propane-1,2,3-triol / glycerol)</pre>\n</div>\n<table class=\"b-mini-table\">\n  <thead>\n    <tr>\n      <th>制皂步骤</th>\n      <th>关键试剂与 HKEAA 实验原理解析</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>Step 1：<code>Saponification</code></strong></td>\n      <td>植物油 + <strong><code>concentrated NaOH(aq)</code></strong> 共沸（常加少量 <strong><code>ethanol</code> 作助溶剂 co-solvent</strong> 促油碱互溶提速）。</td>\n    </tr>\n    <tr>\n      <td><strong>Step 2：<code>Salting out</code>（盐析）</strong></td>\n      <td>倒入 <strong><code>concentrated NaCl(aq)</code> (<code>brine</code>)</strong> ➔ <strong>[1M 必背] To <code>lower the solubility of soap in water</code></strong> so solid <code>soap</code> precipitates out!</td>\n    </tr>\n    <tr>\n      <td><strong>Step 3：过滤洗涤</strong></td>\n      <td><code>Filtration</code> 收集浮出的肥皂固体，用少量 <code>ice-cold distilled water</code> 洗去表面残留 <code>NaOH</code> 与 <code>NaCl</code>。</td>\n    </tr>\n  </tbody>\n</table>\n", "start": 76.692, "end": 172.174}, {"id": "b3_3", "tag": "板书 3 · 硬水浮渣与水体环保 (33.8)", "title": "Hard Water 结 Scum 2:1 离子方程式 vs 无皂清洁剂优势及三大水体环保考题", "html": "\n<div class=\"b-box b-rose\" style=\"margin-bottom:10px;\">\n  <div class=\"b-box-title\">⚠️ Hard Water（含 Ca²⁺ / Mg²⁺）结浮渣 Scum 必背 2:1 离子方程式！</div>\n  <div class=\"b-eq\"><strong>2 RCOO<sup>−</sup>(aq) + Ca<sup>2+</sup>(aq) ⟶ (RCOO)<sub>2</sub>Ca(s)</strong> &nbsp;|&nbsp; <strong>2 RCOO<sup>−</sup>(aq) + Mg<sup>2+</sup>(aq) ⟶ (RCOO)<sub>2</sub>Mg(s)</strong> &nbsp;(灰白沉淀 Scum!)</div>\n  <p class=\"b-tip-text\">• 肥皂在强酸水（pH &lt; 5）亦生成不溶 <code>RCOOH(s)</code> 失效；而 <strong><code>Soapless detergents</code> 的钙盐、镁盐在水中易溶（<code>soluble in water</code>）</strong>且耐酸，绝不结 <code>scum</code>！</p>\n</div>\n<table class=\"b-mini-table\">\n  <thead>\n    <tr>\n      <th>环境问题</th>\n      <th>成因与 HKEAA 标准因果采分链（[2 Marks]）</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>① <code>Persistent foam</code></strong></td>\n      <td>早期 <strong><code>branched-chain</code></strong> 无皂清洁剂属 <strong><code>non-biodegradable</code></strong>（细菌难分解支链）➔ 河面积聚持久泡沫，阻隔阳光与氧气溶入！</td>\n    </tr>\n    <tr>\n      <td><strong>② <code>Biodegradable</code> 仍死鱼！</strong></td>\n      <td>大量排放可降解肥皂或 <strong><code>straight-chain</code></strong> 清洁剂 ➔ <strong><code>Bacteria</code> use up <code>dissolved oxygen</code></strong> in water during breakdown ➔ 鱼虾缺氧窒息！</td>\n    </tr>\n    <tr>\n      <td><strong>③ <code>Algal bloom</code>（红潮）</strong></td>\n      <td>旧式添加剂 <strong><code>phosphate builders</code></strong> 充当植物营养素 ➔ 藻类暴长（<code>eutrophication</code>），死后细菌分解同样耗尽水中 <code>dissolved oxygen</code>！</td>\n    </tr>\n  </tbody>\n</table>\n", "start": 172.794, "end": 308.644}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🥑 油脂本质 · 丙三醇与三条脂肪酸构成的三酯", "boardId": "b3_1", "displayHtml": "欢迎来到第 3 讲！既然肥皂由天然动植物油脂制成，那 <code>animal fats</code> 和 <code>vegetable oils</code> 属于哪个同系物？看<strong>第 1 张板书</strong>：它们统统是 <strong><code>triesters</code>（三酯，又称 <code>triglycerides</code> 甘油三酯）</strong>！竖向三碳骨架来自三元醇 <strong><code>propane-1,2,3-triol</code>（俗名 <code>glycerol</code> 甘油，系统名与俗名都要背熟！）</strong>，横向三条长链酯键源自长链羧酸 <strong><code>fatty acids</code></strong>。", "start": 0.25, "end": 42.234}, {"speaker": "teacher", "role": "concept", "stepTag": "🧊 固液之谜 · 饱和直链紧密堆积 vs 顺式双键弯折", "boardId": "b3_1", "displayHtml": "为什么室温下猪油等 <strong><code>animal fats</code></strong> 是固体，而花生油等 <strong><code>vegetable oils</code></strong> 是液体？联动 Unit 30 两分答透：动物脂肪主要含全单键 <strong><code>saturated hydrocarbon chains</code></strong>，直链规整能 <strong><code>pack closely together</code>（紧密堆积）</strong>，分子间 <strong><code>van der Waals' forces</code> 更强</strong>，熔点高；植物油富含带弯折（<code>kinks</code>）的顺式不饱和双键 <strong><code>unsaturated cis C=C chains</code></strong>，无法紧密堆积，分子间作用力较弱！", "start": 42.574, "end": 76.072}, {"speaker": "teacher", "role": "example", "stepTag": "🧪 煮皂实战 · 1:3 皂化反应与乙醇助溶妙用", "boardId": "b3_2", "displayHtml": "切换到<strong>第 2 张板书</strong>亲手煮肥皂！因为每分子油脂含 3 个酯键，<code>1 mol</code> 油脂与 <strong><code>3 mol concentrated NaOH(aq)</code></strong> 共沸发生不可逆碱性水解——这就是 <strong><code>saponification</code>（皂化反应）</strong>，生成 <code>1 mol</code> <strong><code>propane-1,2,3-triol</code></strong> 和 <code>3 mol</code> 肥皂 <strong><code>RCOO⁻Na⁺</code></strong>！实验常加少量 <strong><code>ethanol</code></strong> 并非作反应物，而是充当<strong>助溶剂（<code>co-solvent</code>）</strong>让油与碱水互溶，大幅加快皂化速率！", "start": 76.692, "end": 123.974}, {"speaker": "teacher", "role": "trap", "stepTag": "🧂 盐析采分 · 倒入浓食盐水降低肥皂溶解度", "boardId": "b3_2", "displayHtml": "煮完皂化液后，肥皂还溶在热水里，怎样把它请出来？进入必考第 2 步——<strong><code>salting out</code>（盐析）</strong>：将热混合液倒入 <strong><code>concentrated NaCl(aq)</code>（浓食盐水 <code>brine</code>）</strong>中搅拌！当考官问加浓 <code>NaCl</code> 的目的时，严禁乱答“中和残碱”，唯一 1 分标准句是：<strong><code>To lower the solubility of soap in water</code>（降低肥皂在水中的溶解度）</strong>，迫使固体肥皂析出浮面，最后过滤并用少量冰蒸馏水洗净！", "start": 124.314, "end": 172.174}, {"speaker": "teacher", "role": "trap", "stepTag": "🪨 硬水瘫痪 · 必背 2:1 浮渣离子方程式", "boardId": "b3_3", "displayHtml": "翻到<strong>第 3 张板书</strong>看传统肥皂的死穴！含较高浓度 <strong><code>Ca²⁺(aq)</code> 或 <code>Mg²⁺(aq)</code></strong> 的天然水称为 <strong><code>hard water</code>（硬水）</strong>。肥皂一进硬水就结成灰白色黏垢 <strong><code>scum</code>（浮渣）</strong>，闭眼默写 2:1 离子方程式：<strong><code>2RCOO⁻(aq) + Ca²⁺(aq) ⟶ (RCOO)₂Ca(s)</code></strong>（严查系数 <code>2</code>、括号下标 <code>2</code> 与沉淀号 <code>(s)</code>！）；在强酸水中亦生成 <code>RCOOH(s)</code> 失效。而 <strong><code>soapless detergents</code> 的钙镁盐易溶于水（<code>soluble in water</code>）</strong>，在硬水与酸水中照样起泡！", "start": 172.794, "end": 212.746}, {"speaker": "teacher", "role": "concept", "stepTag": "🌿 碳链与泡沫 · 支链难降解泡沫 vs 直链可降解", "boardId": "b3_3", "displayHtml": "再看板书下半部的环境化学三连考！早期第一代无皂清洁剂带有密集分叉的 <strong><code>branched-chain</code></strong> 烃尾，河水中的 <code>bacteria</code> 啃不动，属 <strong><code>non-biodegradable</code>（不可生物降解）</strong>，在河面与污水厂堆积厚厚 <strong><code>persistent foam</code>（持久泡沫）</strong>，阻挡阳光并隔绝空气中氧气溶入水中！现代清洁剂改用笔直的 <strong><code>straight-chain</code></strong> 烃尾，便同天然肥皂一样变为 <strong><code>biodegradable</code></strong>；此外旧式洗涤剂中的 <strong><code>phosphate builders</code></strong> 会诱发藻类暴长 <strong><code>algal bloom</code></strong>。", "start": 213.086, "end": 260.792}, {"speaker": "teacher", "role": "trap", "stepTag": "🐟 反直觉陷阱 · 可降解清洁剂过量仍耗尽溶解氧死鱼", "boardId": "b3_3", "displayHtml": "压轴防住 DSE 极高频反直觉大题：“既然 <code>soap</code> 和直链清洁剂都是 <strong><code>biodegradable</code></strong>，把大量肥皂水排进缓流小河是不是绝对安全不会死鱼？”<strong>错！照样害死鱼！</strong>两分标准因果链：<strong>[1M]</strong> 水中 <strong><code>bacteria</code> 在分解大量可降解有机物时会消耗大量 <code>dissolved oxygen</code>（溶解氧）</strong>；<strong>[1M]</strong> 河水严重缺氧导致鱼类窒息死亡（<code>suffocate and die</code>）！下一讲我们进军高分子殿堂——缩合聚合与聚酯 <code>PET</code>、<code>PLA</code>！", "start": 261.132, "end": 308.644}], "quickChecks": [{"q": "实验室将植物油与浓 NaOH(aq) 共沸完成皂化反应（saponification）后，把热混合液倒入浓 NaCl(aq) 中的主要目的是什么？", "options": ["A. 中和混合液中过量的浓 NaOH(aq)", "B. 提供更多 Na⁺ 离子使油脂水解更彻底", "C. 降低肥皂在水中的溶解度（lower the solubility of soap in water），使固体肥皂析出", "D. 将副产物甘油（propane-1,2,3-triol）转化为不溶性沉淀滤去"], "ans": 2, "exp": "加入浓食盐水（conc. NaCl(aq)）的操作称为盐析（salting out），唯一目的是降低肥皂在水中的溶解度（lower the solubility of soap in water），迫使固体肥皂析出并浮于液面；甘油与剩余碱仍留在下层水溶液中。"}, {"q": "硬脂酸钠肥皂（CH₃(CH₂)₁₆COO⁻Na⁺）在含 Ca²⁺(aq) 的硬水（hard water）中形成浮渣（scum）的正确离子方程式是哪一条？", "options": ["A. CH₃(CH₂)₁₆COO⁻(aq) + Ca²⁺(aq) ⟶ CH₃(CH₂)₁₆COOCa⁺(s)", "B. 2CH₃(CH₂)₁₆COO⁻(aq) + Ca²⁺(aq) ⟶ (CH₃(CH₂)₁₆COO)₂Ca(s)", "C. 2CH₃(CH₂)₁₆COO⁻Na⁺(aq) + Ca²⁺(aq) ⟶ (CH₃(CH₂)₁₆COO)₂Ca(aq) + 2Na⁺(aq)", "D. CH₃(CH₂)₁₆COO⁻(aq) + Ca²⁺(aq) ⟶ (CH₃(CH₂)₁₆COO)Ca(s)"], "ans": 1, "exp": "硬脂酸根离子带 −1 电荷而钙离子带 +2 电荷，必须按 2 : 1 摩尔比结合生成灰白色不溶性沉淀硬脂酸钙 scum：(CH₃(CH₂)₁₆COO)₂Ca(s)，系数 2、括号下标 2 及固态符号 (s) 缺一不可！"}], "duration": 309.09, "audioFile": "audio/03_33.7-33.8_油脂皂化盐析硬水浮渣与水体环保.mp3", "fullStart": 573.78, "fullEnd": 882.88}, {"id": "ep4", "epNum": "第 4 讲", "code": "33.9", "fileSlug": "04_33.9_缩合聚合原理与聚酯双星PET和PLA", "titleZh": "缩合聚合（Condensation Polymerization）原理与聚酯双星 PET、PLA", "titleEn": "Principles of Condensation Polymerization & Polyesters: PET and Biodegradable PLA", "goal": "从四大维度精准区分加成聚合（addition polymerization）与缩合聚合（condensation polymerization），掌握双单体聚酯 PET（Terylene）与单单体绿色聚酯 PLA（poly(lactic acid)）的缩聚反应、重复单位（repeating unit）零失误画法及可吸收手术缝合线的水解机理。", "keyTerms": [{"en": "condensation polymerization", "zh": "缩合聚合（脱 H₂O / HCl）"}, {"en": "repeating unit", "zh": "重复单位（去括号去 n 留端键）"}, {"en": "ester linkage (—COO—)", "zh": "酯键（可水解断链）"}, {"en": "poly(ethylene terephthalate) (PET)", "zh": "聚对苯二甲酸乙二醇酯 / 涤纶"}, {"en": "poly(lactic acid) (PLA)", "zh": "聚乳酸（单一单体自缩聚）"}, {"en": "absorbable surgical sutures", "zh": "可吸收外科手术缝合线"}], "boards": [{"id": "b4_1", "tag": "板书 1 · 两大聚合对决 (33.9A)", "title": "Addition Polymerization vs Condensation Polymerization 四维黄金分水岭", "html": "\n<table class=\"b-mini-table\">\n  <thead>\n    <tr>\n      <th>对比维度</th>\n      <th><strong>Addition Polymerization（加聚：PE, PP, PVC, PS）</strong></th>\n      <th><strong>Condensation Polymerization（缩聚：PET, PLA, Nylon）</strong></th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td><strong>① Monomer 结构要求</strong></td>\n      <td>含不饱和碳碳双键 <strong><code>carbon-carbon double bond (C=C)</code></strong></td>\n      <td>每分子含<strong>至少两个活性官能团（at least TWO reactive functional groups）</strong></td>\n    </tr>\n    <tr>\n      <td><strong>② 小分子脱去</strong></td>\n      <td><strong>无小分子脱去</strong>（<code>100% atom economy</code>）</td>\n      <td>聚合伴随<strong>脱去小分子（eliminates small molecules，如 <code>H₂O</code> 或 <code>HCl</code>）</strong></td>\n    </tr>\n    <tr>\n      <td><strong>③ Empirical formula</strong></td>\n      <td>聚合物与单体的实验式<strong>完全相同</strong></td>\n      <td>因脱去小分子，聚合物与单体的实验式<strong>不同</strong></td>\n    </tr>\n    <tr>\n      <td><strong>④ 主链键与耐酸碱性</strong></td>\n      <td>全为非极性稳定 <strong><code>C—C</code> single bonds</strong> ➔ <strong>耐强酸强碱</strong></td>\n      <td>含 <strong><code>ester (—COO—)</code></strong> 或 <strong><code>amide (—CONH—)</code></strong> 键 ➔ 遇强酸/强碱发生 <strong><code>hydrolysis</code></strong>！</td>\n    </tr>\n  </tbody>\n</table>\n", "start": 0.25, "end": 80.634}, {"id": "b4_2", "tag": "板书 2 · 双单体聚酯 PET (33.9B)", "title": "王牌聚酯 PET（Poly(ethylene terephthalate) / Terylene）：1,4-对位双单体与重复单位规范", "html": "\n<div class=\"b-scheme\">\n<pre>【双单体缩聚制 PET（矿泉水瓶 / 汽水瓶 &amp; 涤纶衣物纤维 Terylene）】\n   n HO—C(=O)—C₆H₄—C(=O)—OH    +    n HO—CH₂CH₂—OH    ─────▶   —[ OC—C₆H₄—COO—CH₂CH₂—O ]—ₙ   +   2n H₂O\n   benzene-1,4-dicarboxylic acid      ethane-1,2-diol            PET (主链靠 ester linkages —COO— 连接)\n        (1,4-对位苯环二元酸!)              (乙二醇)\n\n  ★★ 标准 Repeating unit 画法（砍掉方括号与下标 n，左右两端必留延伸键 — ！）：\n      —OC—C₆H₄—COO—CH₂CH₂—O—     （注：苯环必须画成对位 1,4-disubstituted 六边形结构！）</pre>\n</div>\n<div class=\"b-note\">📌 <strong>性质与用途对标</strong>：<code>PET</code> 质轻强韧、不透水气且抗皱易干，广泛用于制造<strong>碳酸饮料瓶/矿泉水瓶（fizzy drink / water bottles）</strong>及<strong>纺织衣物纤维（<code>Terylene</code> fibres）</strong>。</div>\n", "start": 81.254, "end": 176.408}, {"id": "b4_3", "tag": "板书 3 · 单单体绿色聚酯 PLA (33.9B)", "title": "绿色可生物降解聚酯 PLA（Poly(lactic acid)）：手性单单体自缩聚与免拆手术缝合线", "html": "\n<div class=\"b-scheme\">\n<pre>【单一双官能团单体自缩聚制 PLA（打破“缩聚必用两种单体”误区！）】\n            CH₃                                        CH₃\n            │                                          │\n     n HO — CH — C(=O)—OH      ─────────▶      —[ O — CH — C(=O) ]—ₙ     +     n H₂O\n   2-hydroxypropanoic acid (lactic acid)         PLA Repeating unit:  —O—CH(CH₃)—CO—\n   (源自玉米淀粉 corn starch；同一分子兼备 —OH 与 —COOH，且中间 CH 为手性碳 chiral carbon!)\n\n【同类拓展：PHB】单体 3-hydroxybutanoic acid CH₃CH(OH)CH₂COOH  ══▶  Repeating unit: —O—CH(CH₃)—CH₂—CO— (甲基作支链!)</pre>\n</div>\n<div class=\"b-box b-emerald\">\n  <div class=\"b-box-title\">🌱 为何 PLA 可制造免拆线手术缝合线（Absorbable Surgical Sutures）？[2M]</div>\n  <p class=\"b-tip-text\">① 原料源自可再生植物淀粉（<code>renewable</code>）；② <code>PLA</code> 主链含有大量 <strong><code>ester linkages (—COO—)</code></strong>，在人体组织液或潮湿土壤中可缓慢发生 <strong><code>hydrolysis</code>（水解反应）</strong> 断链生成无毒乳酸被人体吸收，属 <strong><code>biodegradable polyester</code></strong>！</p>\n</div>\n", "start": 177.028, "end": 306.072}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "⚖️ 聚合对决 ① · 单体双官能团入场券与脱小分子", "boardId": "b4_1", "displayHtml": "欢迎来到第 4 讲，正式迈入高分子压轴篇章——<strong><code>condensation polymers</code>（缩合聚合物）</strong>！先看<strong>第 1 张板书</strong>前三条黄金分水岭：Topic 7 学的 <code>addition polymerization</code>（如 <code>PE</code>、<code>PP</code>）要求单体含 <strong><code>C=C</code> 双键</strong>且零小分子脱去，聚合物与单体 <code>empirical formula</code> 完全相同；而 <strong><code>condensation polymerization</code></strong> 不靠 <code>C=C</code>，要求每个单体拥有<strong>至少两个活性官能团（<code>at least two reactive functional groups</code>）</strong>，每扣合一次都会脱去 <strong><code>H₂O</code> 或 <code>HCl</code></strong> 小分子，实验式随之改变！", "start": 0.25, "end": 34.924}, {"speaker": "teacher", "role": "concept", "stepTag": "⚖️ 聚合对决 ② · 主链酯键酰胺键埋下水解伏笔", "boardId": "b4_1", "displayHtml": "再看第 1 张板书第 4 行最关键的化学差异：加聚物主链全是惰性的 <strong><code>C—C</code> 单键</strong>，泡在强酸强碱里也岿然不动；而缩聚物长链是靠成千上万个 <strong><code>ester linkages (—COO—)</code></strong> 或 <strong><code>amide linkages (—CONH—)</code></strong> 拼接起来的！这既是软肋也是神技——软肋是遇强酸强碱会发生 <strong><code>hydrolysis</code></strong> 断链腐蚀，神技则是能设计成在自然界或人体内温柔降解的环保医用材料！", "start": 35.264, "end": 80.634}, {"speaker": "teacher", "role": "concept", "stepTag": "🍾 聚酯王牌 · 双单体缩聚合成 PET（涤纶）", "boardId": "b4_2", "displayHtml": "切到<strong>第 2 张板书</strong>认识聚酯家族（<strong><code>polyesters</code></strong>）头号王牌——<strong><code>PET</code>（全称 <code>poly(ethylene terephthalate)</code>，纺织名 <code>Terylene</code> 涤纶）</strong>！它由两种双官能团单体缩聚脱 <code>H₂O</code> 而成：一个是 1,4-对位连在苯环上的二元酸 <strong><code>benzene-1,4-dicarboxylic acid</code></strong>，另一个是二元醇 <strong><code>ethane-1,2-diol</code></strong>。因质轻强韧、不透水气且抗皱，广泛制造汽水矿泉水瓶与抗皱衣物纤维！", "start": 81.254, "end": 129.714}, {"speaker": "teacher", "role": "trap", "stepTag": "✏️ 作图红线 · PET 重复单位“去括号去 n 留端键”", "boardId": "b4_2", "displayHtml": "全班拿红笔圈死<strong>第 2 张板书</strong>中间那行——单独画 <code>PET</code> 的 <strong><code>repeating unit</code>（重复单位）</strong>！酸脱 <code>—OH</code>、醇脱 <code>—H</code> 后，从左往右依次是：左延伸键 <code>—</code>、羰基 <code>C=O</code>、<code>1,4-对位苯环</code>、第二个羰基 <code>C=O</code>、氧原子 <code>—O—</code>、<code>CH₂CH₂</code>、右端氧原子 <code>—O—</code> 及右延伸键！严查三条铁律：<strong>不准画方括号、不准写下标 <code>n</code>、左右两端半截延伸键一根都不准漏</strong>！", "start": 130.054, "end": 176.408}, {"speaker": "teacher", "role": "concept", "stepTag": "🌱 绿色新星 · 手性单单体自缩聚生成聚乳酸 PLA", "boardId": "b4_3", "displayHtml": "翻到<strong>第 3 张板书</strong>认识第二颗绿色聚酯明星——<strong><code>PLA</code>（<code>poly(lactic acid)</code>，聚乳酸）</strong>！千万打破“缩聚一定要两种单体”的刻板印象：看它的单体乳酸 <strong><code>2-hydroxypropanoic acid</code></strong>（源自可再生玉米淀粉 <code>corn starch</code>），同一个分子左手长着醇 <code>—OH</code>、右手长着酸 <code>—COOH</code>（中间那颗碳还是手性碳 <code>chiral carbon</code>！），自己头尾相接脱 <code>H₂O</code> 就能自缩聚成 <code>—O—CH(CH₃)—CO—</code>！", "start": 177.028, "end": 218.306}, {"speaker": "teacher", "role": "example", "stepTag": "🩺 医学奇迹 · 可吸收手术缝合线与 PHB 支链变形", "boardId": "b4_3", "displayHtml": "为什么外科医生最爱用 <code>PLA</code> 做<strong>免拆线手术缝合线（<code>absorbable surgical sutures</code>）</strong>？两分满分逻辑：<code>PLA</code> 主链布满 <strong><code>ester linkages</code></strong>，缝入人体后会被组织液缓慢 <strong><code>hydrolysed</code>（水解）</strong> 断链，变回人体原本就有的无毒乳酸自动吸收，属正宗 <strong><code>biodegradable polyester</code></strong>！顺手留意板书上的同类题 <code>PHB</code>（由 <code>3-hydroxybutanoic acid</code> 自聚）：<code>3</code> 号位甲基必须画作挂在主链 <code>CH</code> 上的侧支链！", "start": 218.646, "end": 257.0}, {"speaker": "teacher", "role": "summary", "stepTag": "📌 本讲小结 · 聚酯双星对比与下一讲聚酰胺预告", "boardId": "b4_3", "displayHtml": "快速收束本讲核心：判断 <code>condensation polymerization</code> 紧盯<strong>双活性官能团</strong>与<strong>脱去小分子</strong>；画聚酯 <code>repeating unit</code> 紧盯酯键 <code>—COO—</code> 与两端延伸键——双单体对位芳香聚酯 <strong><code>PET</code></strong> 扛起水瓶与涤纶大旗，单单体脂肪族聚酯 <strong><code>PLA</code></strong> 凭缓慢水解扛起可降解医疗环保大旗！下一讲是全单元收官大戏：迎战聚酰胺 <code>Nylon-6,6</code> 的碳数巨坑、链间氢键与强酸碱容器安全！", "start": 257.34, "end": 306.072}], "quickChecks": [{"q": "下列有关聚乳酸（poly(lactic acid), PLA）的叙述，哪一项是错误的？", "options": ["A. 它的单体系统名称为 2-hydroxypropanoic acid，且分子内含有一个手性碳（chiral carbon）", "B. 它是通过加成聚合反应（addition polymerization）形成，反应过程没有小分子生成", "C. 它的重复单位（repeating unit）可表示为 —O—CH(CH₃)—CO—", "D. 它主链上的酯键（ester linkages）可在体内缓慢水解，适合制作可吸收手术缝合线"], "ans": 1, "exp": "PLA 由单一双官能团单体 2-hydroxypropanoic acid（HO—CH(CH₃)—COOH）通过缩合聚合反应（condensation polymerization）形成，每形成一个酯键均会脱去小分子 H₂O，绝非加成聚合（B 错误；A、C、D 均完全正确）。"}, {"q": "生物可降解聚酯 PHB 由单一单体 CH₃CH(OH)CH₂COOH 经缩合聚合生成。下列哪一个是 PHB 正确的重复单位（repeating unit）？", "options": ["A. —O—CH₂—CH₂—CH₂—CO—", "B. —[ O—CH(CH₃)—CH₂—CO ]—ₙ", "C. —O—CH(CH₃)—CH₂—CO—", "D. HO—CH(CH₃)—CH₂—COOH"], "ans": 2, "exp": "单体 C-3 上的 —OH 脱 H、C-1 上的 —COOH 脱 —OH，主链连接顺序为 —O—CH(CH₃)—CH₂—CO—（甲基挂在 C-3 上作支链，A 错）；单独书写 repeating unit 时严禁加方括号和下标 n（B 错），D 为单体而非重复单位，故 C 正确！"}], "duration": 306.52, "audioFile": "audio/04_33.9_缩合聚合原理与聚酯双星PET和PLA.mp3", "fullStart": 884.38, "fullEnd": 1190.9}, {"id": "ep5", "epNum": "第 5 讲", "code": "33.10", "fileSlug": "05_33.10_聚酰胺尼龙66链间氢键与强酸碱容器安全", "titleZh": "聚酰胺（Nylon-6,6 与 Kevlar）、链间氢键强度与强酸碱容器安全", "titleEn": "Polyamides (Nylon-6,6 & Kevlar), Intermolecular Hydrogen Bonds & Container Safety", "goal": "攻克聚酰胺王牌 Nylon-6,6 重复单位“酸段 (CH₂)₄、胺段 (CH₂)₆”的头号碳数陷阱及酰氯拉丝脱 HCl 原理，从相邻高分子链间的氢键（intermolecular hydrogen bonds）解释尼龙与 Kevlar 的高抗拉强度，熟练运用剪键补水法反推陌生单体并答准强酸碱严禁装入 PET 水瓶的安全大题。", "keyTerms": [{"en": "polyamide & amide linkage", "zh": "聚酰胺与酰胺键 (—CONH—)"}, {"en": "nylon-6,6 ((CH₂)₄ & (CH₂)₆)", "zh": "尼龙-6,6（酸段4、胺段6！）"}, {"en": "intermolecular hydrogen bonds", "zh": "链间分子间氢键"}, {"en": "tensile strength & Kevlar", "zh": "抗拉强度与防弹衣凯夫拉"}, {"en": "alkaline / acid hydrolysis", "zh": "酸碱催化水解断链"}, {"en": "HDPE / PP vs PET bottles", "zh": "浓酸碱容器安全选材"}], "boards": [{"id": "b5_1", "tag": "板书 1 · 尼龙-6,6 碳数铁律 (33.10A)", "title": "Polyamides 王牌 Nylon-6,6：工业脱 H₂O vs 实验室脱 HCl 及“(CH₂)₄ vs (CH₂)₆”头号巨坑", "html": "\n<div class=\"b-scheme\">\n<pre>【工业热缩聚（脱 2n H₂O） vs 实验室室温界面拉丝 Nylon Rope Trick（换用二酰氯，脱 2n HCl！）】\n  • 工业原料：Hexane-1,6-dioic acid (共 6 颗碳!)      +   Hexane-1,6-diamine (共 6 颗碳!)\n              HO—C(=O)—(CH₂)₄—C(=O)—OH                    H₂N—(CH₂)₆—NH₂\n                 └───── 1 + 4 + 1 = 6C! ─────┘                └── 6C! ──┘\n  • 实验室拉丝：改用高活性 hexanedioyl dichloride  ClOC—(CH₂)₄—COCl  (室温反应极快，脱去 HCl 小分子!)\n\n  ★★ Nylon-6,6 标准 Repeating unit（必背零失误！）：\n      —OC—(CH₂)₄—CONH—(CH₂)₆—NH—      （主链含 amide linkage —CONH—；变式 Nylon-6,10 酸段则为 (CH₂)₈！）</pre>\n</div>\n<div class=\"b-note\">🚨 <strong>HKDSE 十考九中头号巨坑</strong>：<code>Nylon-6,6</code> 两个 <code>6</code> 指两单体各有 6 颗碳！二胺两头是 N 原子不占碳，中间有 <strong><code>(CH₂)₆</code></strong>；二元酸两头两个 <code>C=O</code> 已占 2 颗碳，<code>6 − 2 = 4</code>，中间<strong>只能写 <code>(CH₂)₄</code></strong>（写成 <em>(CH₂)₆</em> 直接零分）！</div>\n", "start": 0.25, "end": 80.1}, {"id": "b5_2", "tag": "板书 2 · 链间氢键与防弹 Kevlar (33.10B)", "title": "为何 Nylon-6,6 与 Kevlar 抗拉强度远超 HDPE？相邻链间密集 Hydrogen Bonds 图解", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 225\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"尼龙-6,6相邻高分子链间形成分子间氢键对比HDPE示意图\">\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"225\" rx=\"12\" fill=\"#f8fafc\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"23\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1e3a8a\">高分子链间作用力决定抗拉强度（Tensile Strength）：Nylon-6,6 / Kevlar vs HDPE</text>\n\n  <!-- Left: Nylon-6,6 H-bonds -->\n  <rect x=\"16\" y=\"36\" width=\"490\" height=\"175\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.6\"/>\n  <rect x=\"16\" y=\"36\" width=\"490\" height=\"26\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"261\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#1d4ed8\">Nylon-6,6 相邻两条主链：&gt;C=O 与 —N—H 形成密集 Intermolecular Hydrogen Bonds</text>\n\n  <!-- Chain 1 -->\n  <text x=\"34\" y=\"92\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.2\" font-weight=\"800\" fill=\"#0f172a\">Chain 1: ···—C—(CH₂)₄—C — N—(CH₂)₆—N—···</text>\n  <text x=\"130\" y=\"114\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" font-weight=\"800\" fill=\"#dc2626\">║</text>\n  <text x=\"204\" y=\"114\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" font-weight=\"800\" fill=\"#dc2626\">║</text>\n  <text x=\"234\" y=\"114\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" font-weight=\"800\" fill=\"#2563eb\">│</text>\n  <text x=\"308\" y=\"114\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" font-weight=\"800\" fill=\"#2563eb\">│</text>\n\n  <text x=\"126\" y=\"129\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">O</text>\n  <text x=\"200\" y=\"129\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">O</text>\n  <text x=\"230\" y=\"129\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#2563eb\">H</text>\n  <text x=\"304\" y=\"129\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#2563eb\">H</text>\n\n  <!-- Dashed H-bonds -->\n  <line x1=\"131\" y1=\"133\" x2=\"131\" y2=\"156\" stroke=\"#059669\" stroke-width=\"2.6\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"205\" y1=\"133\" x2=\"205\" y2=\"156\" stroke=\"#059669\" stroke-width=\"2.6\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"235\" y1=\"133\" x2=\"235\" y2=\"156\" stroke=\"#059669\" stroke-width=\"2.6\" stroke-dasharray=\"4,3\"/>\n  <line x1=\"309\" y1=\"133\" x2=\"309\" y2=\"156\" stroke=\"#059669\" stroke-width=\"2.6\" stroke-dasharray=\"4,3\"/>\n  <rect x=\"334\" y=\"132\" width=\"160\" height=\"26\" rx=\"6\" fill=\"#ecfdf5\" stroke=\"#6ee7b7\"/>\n  <text x=\"414\" y=\"149\" text-anchor=\"middle\" font-size=\"11.2\" font-weight=\"800\" fill=\"#047857\">◀ 强链间 Hydrogen bonds!</text>\n\n  <!-- Chain 2 -->\n  <text x=\"126\" y=\"170\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#2563eb\">H</text>\n  <text x=\"200\" y=\"170\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#2563eb\">H</text>\n  <text x=\"230\" y=\"170\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">O</text>\n  <text x=\"304\" y=\"170\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"800\" fill=\"#dc2626\">O</text>\n  <text x=\"34\" y=\"196\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.2\" font-weight=\"800\" fill=\"#0f172a\">Chain 2: ···—N—(CH₂)₆—N — C—(CH₂)₄—C—···</text>\n\n  <!-- Right: HDPE vs Kevlar -->\n  <rect x=\"520\" y=\"36\" width=\"244\" height=\"175\" rx=\"10\" fill=\"#ffffff\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <rect x=\"520\" y=\"36\" width=\"244\" height=\"26\" rx=\"10\" fill=\"#fef3c7\"/>\n  <text x=\"642\" y=\"53\" text-anchor=\"middle\" font-size=\"12\" font-weight=\"800\" fill=\"#92400e\">对比 HDPE 与防弹纤维 Kevlar</text>\n  <text x=\"534\" y=\"82\" font-size=\"11.8\" font-weight=\"800\" fill=\"#475569\">• HDPE（非极性聚乙烯链）：</text>\n  <text x=\"534\" y=\"100\" font-size=\"11.2\" fill=\"#64748b\">仅靠微弱 van der Waals' forces，易滑移。</text>\n  <line x1=\"532\" y1=\"114\" x2=\"752\" y2=\"114\" stroke=\"#e2e8f0\" stroke-width=\"1.5\"/>\n  <text x=\"534\" y=\"135\" font-size=\"11.8\" font-weight=\"800\" fill=\"#be123c\">• Kevlar（防弹衣 Bulletproof vests）：</text>\n  <text x=\"534\" y=\"154\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"11\" font-weight=\"700\" fill=\"#1e293b\">—OC—C₆H₄—CONH—C₆H₄—NH—</text>\n  <text x=\"534\" y=\"174\" font-size=\"11.2\" fill=\"#334155\">刚性 1,4-对位苯环 + 极密集链间氢键</text>\n  <text x=\"534\" y=\"193\" font-size=\"11.2\" font-weight=\"700\" fill=\"#047857\">➔ 超高抗拉强度 (climbing ropes / vests)</text>\n</svg>\n<div class=\"b-quote\" style=\"margin-top:8px; margin-bottom:0;\">\n  <div class=\"b-quote-en\"><strong>[2M Standard Answer]</strong> Strong <strong><code>intermolecular hydrogen bonds</code></strong> exist between the <code>&gt;C=O</code> groups and <code>—N—H</code> groups of adjacent <code>nylon-6,6</code> chains [1M], whereas only weaker <strong><code>van der Waals' forces</code></strong> exist between non-polar <code>HDPE</code> chains [1M].</div>\n</div>\n", "start": 80.72, "end": 176.322}, {"id": "b5_3", "tag": "板书 3 · 反推单体、容器安全与大满贯 (33.10B)", "title": "陌生缩聚物反推单体两步刀法、强酸碱容器安全铁律与 Topic 8 五单元大满贯", "html": "\n<div class=\"board-grid-2\" style=\"margin-bottom:10px;\">\n  <div class=\"b-box b-amber\">\n    <div class=\"b-box-title\">✂️ 陌生缩聚物反推 Monomers 两步万能刀法</div>\n    <ul class=\"b-points\">\n      <li><strong>Step 1 找搭扣剪开</strong>：沿主链 <code>—C(=O) | O—</code> 或 <code>—C(=O) | NH—</code>（含两端延伸键）剪断！</li>\n      <li><strong>Step 2 补回 H₂O</strong>：凡 <strong><code>—C(=O)</code> 端补 <code>—OH</code></strong> 还原为 <code>—COOH</code>（或补 <code>—Cl</code> 为酰氯）；凡 <strong><code>—O— / —NH—</code> 端补 <code>—H</code></strong> 还原为 <code>—OH</code> 或 <code>—NH₂</code>！</li>\n    </ul>\n  </div>\n  <div class=\"b-box b-rose\">\n    <div class=\"b-box-title\">🚨 为何浓 NaOH 通渠水严禁装入 PET 瓶？[2M]</div>\n    <ul class=\"b-points\">\n      <li><strong>[1M 断链漏液]</strong> Conc. alkali/acid catalyzes <strong><code>hydrolysis</code> of <code>ester linkages</code> in <code>PET</code></strong> (or <code>amide linkages</code> in <code>nylon</code>), cracking the bottle!</li>\n      <li><strong>[1M 安全替代]</strong> <code>HDPE</code> / <code>PP</code> have only unreactive <strong><code>C—C</code> and <code>C—H</code> single bonds</strong>, resistant to strong acids &amp; alkalis.</li>\n    </ul>\n  </div>\n</div>\n<div class=\"b-box b-teal\">\n  <div class=\"b-box-title\">🏆 Mastering Chemistry · Topic 8 五单元有机化学版图全闭环！</div>\n  <p class=\"b-tip-text\"><strong>Unit 29</strong>（命名与氢键物理性质）➔ <strong>Unit 30</strong>（顺反与旋光立体异构）➔ <strong>Unit 31</strong>（八大官能团转化引擎）➔ <strong>Unit 32</strong>（多步合成、产率与液固提纯）➔ <strong>Unit 33</strong>（阿司匹林、清洁剂与缩合高分子现代应用）—— 祝同学们 HKDSE 化学摘星夺冠！</p>\n</div>\n", "start": 176.942, "end": 321.346}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🧵 聚酰胺霸主 · 尼龙-6,6 工业热缩聚与实验室拉丝", "boardId": "b5_1", "displayHtml": "欢迎来到第 5 讲，也是整个 Topic 8 的收官之战！今天聚焦靠酰胺键 <strong><code>amide linkages (—CONH—)</code></strong> 连接的 <strong><code>polyamides</code>（聚酰胺）</strong>（天然蚕丝与蛋白质亦属天然聚酰胺）。看<strong>第 1 张板书</strong>王牌合成纤维 <strong><code>nylon-6,6</code></strong>：工业上用六碳二元酸 <strong><code>hexane-1,6-dioic acid</code></strong> 与六碳二胺 <strong><code>hexane-1,6-diamine</code></strong> 热缩聚脱去 <strong><code>H₂O</code></strong>；而在学校实验室室温“尼龙拉丝”界面缩聚中，则换用活性极高的二酰氯 <strong><code>hexanedioyl dichloride</code></strong>，脱去的小分子变为 <strong><code>HCl</code></strong>！", "start": 0.25, "end": 37.588}, {"speaker": "teacher", "role": "trap", "stepTag": "🚨 头号巨坑 · 为何酸段是 (CH₂)₄ 而胺段是 (CH₂)₆", "boardId": "b5_1", "displayHtml": "请全班把<strong>第 1 张板书</strong>的 <code>(CH₂)₄</code> 涂到最亮——这是 HKDSE 十考九中的头号巨坑！名字里的 <code>6,6</code> 指两个单体各含 <strong>6 颗碳原子</strong>：二胺两头是氮原子不占碳名额，中间实打实排满 6 个亚甲基 <strong><code>(CH₂)₆</code></strong>；但二元酸两头的<strong>两颗羰基碳 <code>C=O</code> 本身已经占掉 2 颗碳</strong>，<code>6 − 2 = 4</code>，夹在中间的只能是 <strong><code>(CH₂)₄</code></strong>！写成 <em>(CH₂)₆</em> 就变成八碳二元酸，直接零分！同理若考 <code>nylon-6,10</code>，酸段中间必写 <strong><code>(CH₂)₈</code></strong>！", "start": 37.928, "end": 80.1}, {"speaker": "teacher", "role": "concept", "stepTag": "💪 强度奥秘 · 链间密集氢键完胜聚乙烯范德华力", "boardId": "b5_2", "displayHtml": "切换到<strong>第 2 张板书</strong>的 SVG 图：为什么 <code>nylon-6,6</code> 能做登山绳、钓鱼线和降落伞，<strong><code>tensile strength</code>（抗拉强度）</strong>远高于高密度聚乙烯 <code>HDPE</code>？切忌外行答“共价键更强”——拉扯纤维比拼的是链间防滑移能力！两分标准答案：<strong>[1M]</strong> 相邻两条 <code>nylon-6,6</code> 链的 <code>&gt;C=O</code> 与 <code>—N—H</code> 之间形成强大的 <strong><code>intermolecular hydrogen bonds</code></strong>；<strong>[1M]</strong> 而非极性 <code>HDPE</code> 链间仅有微弱的 <strong><code>van der Waals' forces</code></strong>！", "start": 80.72, "end": 128.384}, {"speaker": "teacher", "role": "example", "stepTag": "🛡️ 超级纤维 · 防弹衣材料 Kevlar 的刚性芳香结构", "boardId": "b5_2", "displayHtml": "再看第 2 张板书右下方，如果把尼龙里的柔性碳链全部换成刚性的 <code>1,4-对位苯环</code>，就升级成了大名鼎鼎的防弹衣纤维——<strong><code>Kevlar</code>（凯夫拉）</strong>！它的重复单位是 <code>—OC—C₆H₄—CONH—C₆H₄—NH—</code>：刚性对位苯环让高分子链像笔直的钢尺一样紧密排列，配合极其密集的链间 <strong><code>intermolecular hydrogen bonds</code></strong>，赋予它以轻柔之躯挡住子弹的超凡强度（<code>bulletproof vests</code>）！", "start": 128.724, "end": 176.322}, {"speaker": "teacher", "role": "example", "stepTag": "✂️ 万能刀法 · 剪断酯键酰胺键补回水分子反推单体", "boardId": "b5_3", "displayHtml": "翻到<strong>第 3 张板书</strong>左框，掌握考场百发百中的<strong>陌生缩聚物反推 <code>monomers</code> 两步刀法</strong>！第一步找搭扣下剪刀：把重复单位里的酯键 <code>C(=O)—O</code> 或酰胺键 <code>C(=O)—NH</code>（连同左右两端延伸键处）全部剪开；第二步原路补回脱去的 <code>H₂O</code>：<strong>凡是带羰基 <code>C=O</code> 的断口一律补上 <code>—OH</code></strong> 变回羧酸 <code>—COOH</code>（若题干指明酰氯法则补 <code>—Cl</code>），<strong>凡是 <code>—O—</code> 或 <code>—NH—</code> 断口一律补上 <code>—H</code></strong> 变回醇或胺！", "start": 176.942, "end": 229.376}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 安全压轴 · 为何浓碱通渠水绝不可装进 PET 水瓶", "boardId": "b5_3", "displayHtml": "再看板书右框源于真实新闻的 DSE 必考安全题：为何含浓 <code>NaOH(aq)</code> 的强力通渠水或浓酸必须装在 <code>HDPE</code> / <code>PP</code> 瓶里，<strong>严禁倒进喝剩的 <code>PET</code> 矿泉水瓶或溅到 <code>nylon</code> 衣物上</strong>？两分满分答案：<strong>[1M]</strong> 浓碱或浓酸会催化 <code>PET</code> 主链的 <strong><code>ester linkages</code></strong>（及尼龙的 <strong><code>amide linkages</code></strong>）发生 <strong><code>hydrolysis</code></strong> 断链降解，导致瓶身蚀穿漏液灼伤；<strong>[1M]</strong> 而加聚物 <code>HDPE</code> / <code>PP</code> 仅含不活泼的 <strong><code>C—C</code> 和 <code>C—H</code> 单键</strong>，耐强酸强碱腐蚀！", "start": 229.716, "end": 279.204}, {"speaker": "teacher", "role": "summary", "stepTag": "🎓 大满贯收官 · Unit 33 黄金清单与 Topic 8 全景闭环", "boardId": "b5_3", "displayHtml": "看板书底部绿色通栏，为整个 Topic 8 画上圆满句号！本单元我们串联了 <code>Aspirin</code>（氧连苯环与 <code>1:2</code> 返滴定）、<code>Detergents</code>（四步负电排斥乳化、盐析、硬水 <code>2:1</code> 浮渣与溶解氧环保）及 <code>Condensation Polymers</code>（<code>PET</code>、<code>PLA</code>、<code>Nylon-6,6</code> 酸四胺六、链间氢键与容器安全）。从 Unit 29 命名、Unit 30 异构、Unit 31 反应、Unit 32 合成到今天 Unit 33 落地应用，祝同学们带着这套完整有机化学体系在 HKDSE 考场自信亮剑、夺星成功！", "start": 279.544, "end": 321.346}], "quickChecks": [{"q": "下列哪一个结构式能正确表示聚酰胺尼龙-6,6（nylon-6,6）的重复单位（repeating unit）？", "options": ["A. —OC—(CH₂)₆—CONH—(CH₂)₆—NH—", "B. —OC—(CH₂)₄—CONH—(CH₂)₆—NH—", "C. —OC—(CH₂)₄—COO—(CH₂)₆—O—", "D. —[ OC—(CH₂)₄—CONH—(CH₂)₆—NH ]—ₙ"], "ans": 1, "exp": "Nylon-6,6 由 6 碳二元酸 hexane-1,6-dioic acid（HOOC—(CH₂)₄—COOH，两端两个 C=O 已占 2 颗碳，中间必为 (CH₂)₄！）与 6 碳二胺 hexane-1,6-diamine（H₂N—(CH₂)₆—NH₂，中间为 (CH₂)₆）缩聚形成酰胺键 —CONH—（A 碳数错，C 误画成酯键）；单独写 repeating unit 不加方括号与下标 n（D 错），故 B 完全正确！"}, {"q": "市面上含浓 NaOH(aq) 的强力通渠水通常盛载于高密度聚乙烯（HDPE）瓶中，而严禁转装入聚对苯二甲酸乙二醇酯（PET）矿泉水瓶中，其化学原因是什么？", "options": ["A. 浓 NaOH(aq) 会与 PET 发生加成反应使其融化", "B. HDPE 分子链之间存在强氢键，而 PET 分子链之间只有范德华力", "C. 浓 NaOH(aq) 会催化 PET 主链中的酯键（ester linkages）发生碱性水解（alkaline hydrolysis）断链导致瓶身破裂漏液", "D. PET 在纯水中极易溶解，而 HDPE 不溶于水"], "ans": 2, "exp": "PET 属于聚酯（polyester），主链含有大量酯键（ester linkages, —COO—），遇浓强碱会发生碱性水解（alkaline hydrolysis）导致高分子链断裂、瓶体破裂漏液；而加聚物 HDPE 主链全为稳定的非极性 C—C 单键，耐强酸强碱腐蚀。"}], "duration": 321.8, "audioFile": "audio/05_33.10_聚酰胺尼龙66链间氢键与强酸碱容器安全.mp3", "fullStart": 1192.4, "fullEnd": 1514.19}]};
+
+    (function () {
+      const data = window.COURSE_DATA;
+      const episodes = data.episodes;
+      const STORAGE_KEY = 'mc_unit33_audio_preview_v1';
+
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) {}
+
+      const state = {
+        currentEpIdx: typeof saved.currentEpIdx === 'number' && saved.currentEpIdx < episodes.length ? saved.currentEpIdx : 0,
+        doneEps: saved.doneEps || {},
+        autoScroll: true,
+        autoPlayNext: true,
+        speed: saved.speed || 1.0
+      };
+
+      const audio = document.getElementById('classroom-audio');
+      const epStrip = document.getElementById('ep-strip');
+      const epHero = document.getElementById('ep-hero');
+      const boardsContainer = document.getElementById('boards-container');
+      const transcriptList = document.getElementById('transcript-list');
+      const quizContainer = document.getElementById('quiz-container');
+
+      const playBtn = document.getElementById('play-btn');
+      const seekSlider = document.getElementById('seek-slider');
+      const curTimeEl = document.getElementById('cur-time');
+      const durTimeEl = document.getElementById('dur-time');
+      const dockEpLabel = document.getElementById('dock-ep-label');
+      const speedSelect = document.getElementById('speed-select');
+      const autoScrollBtn = document.getElementById('auto-scroll-toggle');
+      const autoplayBtn = document.getElementById('autoplay-btn');
+      const downloadMerged = document.getElementById('download-merged-link');
+      const downloadEp = document.getElementById('download-ep-link');
+      const totalDurBadge = document.getElementById('total-dur-badge');
+      const companionLink = document.getElementById('companion-site-link');
+      const handoutMdLink = document.getElementById('handout-md-link');
+
+      if (/\.github\.io$/i.test(window.location.hostname)) {
+        companionLink.href = 'https://kenlin666bot.github.io/mastering-organic-chem/';
+        handoutMdLink.href = encodeURI('https://github.com/KenLin666Bot/unit33-audio-preview/blob/main/Unit33_双语课堂讲义与逐字稿.md');
+        document.querySelectorAll('.unit-jump-link').forEach(a => {
+          const gh = a.getAttribute('data-gh');
+          if (gh) a.href = gh;
+        });
+      }
+
+      let isDraggingSlider = false;
+      let activeTurnIdx = -1;
+      let activeBoardId = null;
+
+      function fmtTime(sec) {
+        if (!isFinite(sec) || sec < 0) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            currentEpIdx: state.currentEpIdx,
+            doneEps: state.doneEps,
+            speed: state.speed
+          }));
+        } catch (e) {}
+      }
+
+      downloadMerged.href = encodeURI(data.mergedAudioFile);
+      totalDurBadge.textContent = fmtTime(data.totalDuration);
+      speedSelect.value = String(state.speed);
+
+      function renderEpisodeStrip() {
+        epStrip.innerHTML = episodes.map((ep, idx) => {
+          const isDone = !!state.doneEps[ep.id];
+          const activeCls = idx === state.currentEpIdx ? 'active' : '';
+          return `
+            <button class="ep-tab ${activeCls}" data-ep-idx="${idx}">
+              <div class="ep-tab-top">
+                <span>${ep.epNum} · ${ep.code}</span>
+                ${isDone ? '<span class="ep-done-dot">✓ 已学完</span>' : ''}
+              </div>
+              <div class="ep-tab-title">${ep.titleZh}</div>
+              <div class="ep-tab-meta">
+                <span>🎧 约 ${fmtTime(ep.duration)}</span>
+                <span>${ep.boards.length} 张板书</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        epStrip.querySelectorAll('.ep-tab').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = Number(btn.getAttribute('data-ep-idx'));
+            loadEpisode(idx, true);
+          });
+        });
+      }
+
+      function loadEpisode(idx, autoPlay) {
+        state.currentEpIdx = idx;
+        activeTurnIdx = -1;
+        activeBoardId = null;
+        saveState();
+        renderEpisodeStrip();
+
+        const ep = episodes[idx];
+
+        epHero.innerHTML = `
+          <div class="ep-hero-kicker">
+            <span>📚 Mastering Chemistry · Unit 33</span>
+            <span>|</span>
+            <span>${ep.epNum}（课本 ${ep.code}）</span>
+          </div>
+          <h1 class="ep-hero-title">${ep.titleZh}</h1>
+          <div class="ep-hero-en">${ep.titleEn}</div>
+          <div class="ep-goal-box">🎯 <strong>本讲预习目标：</strong>${ep.goal}</div>
+          <div class="term-row">
+            ${ep.keyTerms.map(t => `<span class="term-chip"><b>${t.en}</b> · ${t.zh}</span>`).join('')}
+          </div>
+        `;
+
+        boardsContainer.innerHTML = ep.boards.map((b, bIdx) => `
+          <section class="board-card ${bIdx === 0 ? 'is-active-board' : ''}" id="card-${b.id}" data-board-id="${b.id}">
+            <div class="board-head">
+              <div class="board-tag-wrap">
+                <span class="board-tag">${b.tag}</span>
+                <span class="live-pill">● 正在讲授此板书</span>
+              </div>
+              <button class="board-jump-btn" data-jump="${b.start}">▶ 跳到此板书 (${fmtTime(b.start)})</button>
+            </div>
+            <h2 class="board-title">${b.title}</h2>
+            <div class="board-body">${b.html}</div>
+          </section>
+        `).join('');
+
+        boardsContainer.querySelectorAll('.board-jump-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const t = parseFloat(btn.getAttribute('data-jump') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        transcriptList.innerHTML = ep.turns.map((t, tIdx) => `
+          <div class="turn-bubble role-${t.role || 'concept'}" id="turn-${tIdx}" data-turn-idx="${tIdx}" data-start="${t.start}">
+            <div class="turn-meta">
+              <span class="speaker-name">${t.stepTag}</span>
+              <span class="turn-time">${fmtTime(t.start)}</span>
+            </div>
+            <div class="turn-text">${t.displayHtml}</div>
+          </div>
+        `).join('');
+
+        transcriptList.querySelectorAll('.turn-bubble').forEach(div => {
+          div.addEventListener('click', () => {
+            const t = parseFloat(div.getAttribute('data-start') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        quizContainer.innerHTML = `
+          <h3 class="quiz-head">⚡ 听完测一测：30 秒预习快问快答</h3>
+          ${ep.quickChecks.map((q, qIdx) => `
+            <div class="q-item" data-q-idx="${qIdx}">
+              <div class="q-stem">${qIdx + 1}. ${q.q}</div>
+              <div class="q-opts">
+                ${q.options.map((opt, oIdx) => `
+                  <button class="q-opt-btn" data-q="${qIdx}" data-o="${oIdx}">${opt}</button>
+                `).join('')}
+              </div>
+              <div class="q-exp" id="q-exp-${qIdx}">💡 <strong>解析：</strong>${q.exp}</div>
+            </div>
+          `).join('')}
+        `;
+
+        quizContainer.querySelectorAll('.q-opt-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const qIdx = Number(btn.getAttribute('data-q'));
+            const oIdx = Number(btn.getAttribute('data-o'));
+            const qObj = ep.quickChecks[qIdx];
+            const parent = btn.closest('.q-item');
+            parent.querySelectorAll('.q-opt-btn').forEach((b, i) => {
+              b.classList.remove('correct', 'wrong');
+              if (i === qObj.ans) b.classList.add('correct');
+            });
+            if (oIdx !== qObj.ans) btn.classList.add('wrong');
+            document.getElementById(`q-exp-${qIdx}`).style.display = 'block';
+          });
+        });
+
+        audio.src = encodeURI(ep.audioFile);
+        audio.playbackRate = state.speed;
+        downloadEp.href = encodeURI(ep.audioFile);
+        dockEpLabel.textContent = `${ep.epNum} (${ep.code}) · ${ep.titleZh}`;
+        seekSlider.max = String(ep.duration);
+        seekSlider.value = '0';
+        curTimeEl.textContent = '00:00';
+        durTimeEl.textContent = fmtTime(ep.duration);
+
+        if (autoPlay) {
+          audio.play().catch(() => {});
+        } else {
+          playBtn.textContent = '▶ 开始听课';
+        }
+      }
+
+      function seekAndPlay(targetSec) {
+        if (audio.readyState >= 1) {
+          audio.currentTime = targetSec;
+          audio.play().catch(() => {});
+        } else {
+          audio.addEventListener('loadedmetadata', function onMeta() {
+            audio.removeEventListener('loadedmetadata', onMeta);
+            audio.currentTime = targetSec;
+            audio.play().catch(() => {});
+          });
+          audio.load();
+        }
+      }
+
+      function syncClassroomHighlight(t) {
+        const ep = episodes[state.currentEpIdx];
+        if (!ep) return;
+
+        let foundIdx = -1;
+        for (let i = 0; i < ep.turns.length; i++) {
+          const turn = ep.turns[i];
+          const nextStart = (i + 1 < ep.turns.length) ? ep.turns[i + 1].start : ep.duration + 1;
+          if (t >= turn.start - 0.08 && t < nextStart) {
+            foundIdx = i;
+            break;
+          }
+        }
+
+        if (foundIdx !== -1 && foundIdx !== activeTurnIdx) {
+          activeTurnIdx = foundIdx;
+          transcriptList.querySelectorAll('.turn-bubble').forEach((el, i) => {
+            el.classList.toggle('active-turn', i === foundIdx);
+          });
+          const activeTurnEl = document.getElementById(`turn-${foundIdx}`);
+          if (activeTurnEl && state.autoScroll) {
+            activeTurnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+
+          const targetBoardId = ep.turns[foundIdx].boardId;
+          if (targetBoardId && targetBoardId !== activeBoardId) {
+            const prevBoard = activeBoardId;
+            activeBoardId = targetBoardId;
+            boardsContainer.querySelectorAll('.board-card').forEach(card => {
+              card.classList.toggle('is-active-board', card.getAttribute('data-board-id') === targetBoardId);
+            });
+            if (prevBoard !== null && state.autoScroll) {
+              const cardEl = document.getElementById(`card-${targetBoardId}`);
+              if (cardEl) {
+                const y = cardEl.getBoundingClientRect().top + window.scrollY - 82;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }
+          }
+        }
+      }
+
+      audio.addEventListener('timeupdate', () => {
+        const t = audio.currentTime;
+        if (!isDraggingSlider) {
+          seekSlider.value = String(t);
+        }
+        curTimeEl.textContent = fmtTime(t);
+        syncClassroomHighlight(t);
+      });
+
+      audio.addEventListener('loadedmetadata', () => {
+        if (audio.duration && isFinite(audio.duration)) {
+          seekSlider.max = String(audio.duration);
+          durTimeEl.textContent = fmtTime(audio.duration);
+        }
+        audio.playbackRate = state.speed;
+      });
+
+      audio.addEventListener('play', () => {
+        playBtn.textContent = '⏸ 暂停';
+      });
+
+      audio.addEventListener('pause', () => {
+        playBtn.textContent = '▶ 继续听课';
+      });
+
+      audio.addEventListener('ended', () => {
+        const ep = episodes[state.currentEpIdx];
+        state.doneEps[ep.id] = true;
+        saveState();
+        renderEpisodeStrip();
+        if (state.autoPlayNext && state.currentEpIdx + 1 < episodes.length) {
+          loadEpisode(state.currentEpIdx + 1, true);
+        } else {
+          playBtn.textContent = '↺ 重听本讲';
+        }
+      });
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play().catch(() => {});
+        } else {
+          audio.pause();
+        }
+      });
+
+      document.getElementById('rew-btn').addEventListener('click', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+      });
+
+      document.getElementById('fwd-btn').addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 10);
+      });
+
+      document.getElementById('prev-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx > 0) loadEpisode(state.currentEpIdx - 1, !audio.paused);
+      });
+
+      document.getElementById('next-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx + 1 < episodes.length) loadEpisode(state.currentEpIdx + 1, !audio.paused);
+      });
+
+      seekSlider.addEventListener('input', () => {
+        isDraggingSlider = true;
+        curTimeEl.textContent = fmtTime(parseFloat(seekSlider.value));
+      });
+
+      seekSlider.addEventListener('change', () => {
+        audio.currentTime = parseFloat(seekSlider.value);
+        isDraggingSlider = false;
+      });
+
+      speedSelect.addEventListener('change', () => {
+        state.speed = parseFloat(speedSelect.value);
+        audio.playbackRate = state.speed;
+        saveState();
+      });
+
+      autoScrollBtn.addEventListener('click', () => {
+        state.autoScroll = !state.autoScroll;
+        autoScrollBtn.classList.toggle('on', state.autoScroll);
+        autoScrollBtn.textContent = state.autoScroll ? '🎯 自动跟随：开' : '🎯 自动跟随：关';
+      });
+
+      autoplayBtn.addEventListener('click', () => {
+        state.autoPlayNext = !state.autoPlayNext;
+        autoplayBtn.textContent = state.autoPlayNext ? '🔁 连播：开' : '🔁 连播：关';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          playBtn.click();
+        } else if (e.code === 'ArrowLeft') {
+          audio.currentTime = Math.max(0, audio.currentTime - 5);
+        } else if (e.code === 'ArrowRight') {
+          audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 5);
+        }
+      });
+
+      loadEpisode(state.currentEpIdx, false);
+    })();
+  </script>
+</body>
+</html>
